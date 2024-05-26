@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'SofiaSans'; // Name of font
+    src: url('../fonts/SofiaSans-ExtraLight.woff2') format('woff2'); //source url
+    font-weight: 200; // check prop of fonts for this param
+    font-style: normal; // needed style
+    font-display: swap; // to render text if the font file is not loaded
+}
+
+@font-face {
+    font-family: 'SofiaSans'; // Name of font
+    src: url('../fonts/SofiaSans-Light.woff2') format('woff2'); //source url
+    font-weight: 300; // check prop of fonts for this param
+    font-style: normal; // needed style
+    font-display: swap; // to render text if the font file is not loaded
+}
+
+@font-face {
+    font-family: 'SofiaSans'; // Name of font
+    src: url('../fonts/SofiaSans-SemiBold.woff2') format('woff2'); //source url
+    font-weight: 600; // check prop of fonts for this param
+    font-style: normal; // needed style
+    font-display: swap; // to render text if the font file is not loaded
+}
+
+@font-face {
+    font-family: 'SofiaSans'; // Name of font
+    src: url('../fonts/SofiaSans-Bold.woff2') format('woff2'); //source url
+    font-weight: 700; // check prop of fonts for this param
+    font-style: normal; // needed style
+    font-display: swap; // to render text if the font file is not loaded
+}
+
+@font-face {
+    font-family: 'SofiaSans'; // Name of font
+    src: url('../fonts/SofiaSans-ExtraBold.woff2') format('woff2'); //source url
+    font-weight: 800; // check prop of fonts for this param
+    font-style: normal; // needed style
+    font-display: swap; // to render text if the font file is not loaded
+}
+
+@font-face {
+    font-family: 'SofiaSans'; // Name of font
+    src: url('../fonts/SofiaSans-Black.woff2') format('woff2'); //source url
+    font-weight: 900; // check prop of fonts for this param
+    font-style: normal; // needed style
+    font-display: swap; // to render text if the font file is not loaded
+}
+
