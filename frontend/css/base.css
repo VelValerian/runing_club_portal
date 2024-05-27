@@ -55,7 +55,10 @@
         background-position: center center; /* Центрирует изображение */
     }
     .container {
-        margin: 12px 8px 0 8px; /* Отступы: сверху, справа, снизу (0), слева */
+        margin: 12px 4px 0px 4px; /* Отступы: сверху, справа, снизу (0), слева */
+    }
+    .content {
+        padding: 0px 16px;
     }
 }
 
@@ -126,14 +129,74 @@ body {
   padding: 0;
   min-height: 100vh;
   background-color: var(--color-bg); /* Задаем цвет фона */
-
 }
 
 .container {
+    padding: 52px 0;
     border-radius: 40px;
     backdrop-filter: blur(10px);
     box-shadow: 12px 8px 15px 0 rgba(0, 0, 0, 0.5), inset 14px 14px 20px 0 rgba(255, 255, 255, 0.25), inset -14px -14px 10px 0 rgba(0, 0, 0, 0.6);
     background: hsl(0, 0%, 0%, 0.1);;
+}
+
+.content {
+    padding: 0px 40px;
+}
+
+.header {
+    display: flex; /* Используем flexbox для расположения элементов */
+    justify-content: space-between; /* Размещаем элементы по краям */
+    align-items: center; /* Выравниваем элементы по вертикали по центру */
+    padding: 0px 36px;
+    height: 64px;
+    weight: 100%;
+}
+
+.header .logo{
+    display: flex; /* Используем flexbox для расположения элементов */
+    justify-content: space-between; /* Размещаем элементы по краям */
+    align-items: center; /* Выравниваем элементы по вертикали по центру */
+    height: 100%;
+
+}
+
+/* Стили для иконки бренда */
+.header .logo .brand-icon {
+  width: 64px; /* Ширина иконки */
+  height: 64px; /* Высота иконки */
+  background-image: url('../img/icon/logo_64.svg'); /* URL изображения */
+  background-size: cover; /* Изображение полностью покрывает элемент */
+  background-repeat: no-repeat; /* Изображение не повторяется */
+  background-position: center; /* Центрируем изображение */
+}
+
+/* Стили для названия бренда */
+.header .logo .brand-name {
+  width: 200px; /* Ширина названия */
+  height: 64px; /* Высота названия */
+  margin-left: 10px;
+  background-image: url('../img/icon/brand-name.svg'); /* URL изображения */
+  background-size: contain; /* Изображение сжимается, чтобы уместиться */
+  background-repeat: no-repeat; /* Изображение не повторяется */
+  background-position: center; /* Центрируем изображение */
+}
+
+.header .hamburger-menu {
+  display: flex; /* Используем flexbox для расположения полосок */
+  flex-direction: row; /* Располагаем полоски по горизонтали */
+  justify-content: space-between; /* Распределяем полоски равномерно с пробелами между ними */
+  align-items: center; /* Выравниваем полоски по горизонтали по центру */
+  width: 24px; /* Ширина всего меню */
+  height: 28px; /* Высота всего меню */
+  cursor: pointer; /* Курсор меняется на указатель при наведении */
+}
+
+/* Стили для каждой полоски */
+.header .hamburger-menu .bar {
+  width: 4px; /* Ширина полоски */
+  height: 100%; /* Высота полоски */
+  background: var(--color-text-gradient); /* Цвет полоски */
+  border-radius: 3px; /* Скругление углов полоски */
 }
 
 .text-main-name {
