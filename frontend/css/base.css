@@ -212,6 +212,94 @@ body {
   border-radius: 3px; /* Скругление углов полоски */
 }
 
+.hamburger-menu.hidden {
+    display: none; /* Скрываем hamburger-menu */
+
+}
+
+/*Модальное меню */
+.modal-menu {
+    display: flex; /* Используем flexbox для расположения элементов */
+    align-items: center; /* Выравниваем элементы по вертикали по центру */
+    flex-direction: row; /* Располагаем элементы по горизонтали */
+    position: fixed;
+    right: 0;
+    margin-right: 36px;
+    height: 64px;
+    gap: 32px;
+    transition: visibility 0.5s, opacity 0.5s ease;
+    z-index: 1000;
+    visibility: hidden; /* Скрываем модальное меню по умолчанию */
+    opacity: 0; /* Прозрачность по умолчанию */
+}
+
+.modal-menu.open {
+    visibility: visible; /* Показываем модальное меню */
+    opacity: 1; /* Устанавливаем непрозрачность */
+}
+
+.close-button {
+  position: relative; /* Используем относительное позиционирование */
+  width: 36px; /* Ширина всего меню */
+  height: 36px; /* Высота всего меню */
+  cursor: pointer; /* Курсор меняется на указатель при наведении */
+  margin-left: auto;
+}
+
+.close-button .bar-1, .close-button .bar-2 {
+  position: absolute; /* Абсолютное позиционирование полосок */
+  top: 50%; /* Центрируем полоски по вертикали */
+  left: 50%; /* Центрируем полоски по горизонтали */
+  width: 28px; /* Ширина полосок */
+  height: 4px; /* Высота полосок */
+  background: var(--color-text-gradient); /* Цвет полосок */
+  border-radius: 3px; /* Скругление углов полосок */
+  transform-origin: center; /* Центрируем точку вращения */
+}
+
+.close-button .bar-1 {
+  transform: translate(-50%, -50%) rotate(45deg); /* Поворачиваем полоску на 45 градусов и центрируем */
+
+}
+
+.close-button .bar-2 {
+  transform: translate(-50%, -50%) rotate(-45deg); /* Поворачиваем полоску на -45 градусов и центрируем */
+
+}
+
+.menu-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.menu-nav a {
+    text-decoration: none;
+    font-family: 'SofiaSans', sans-serif; /* Применение шрифта */
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0.08em;
+    font-variant: small-caps;
+    color: var(--color-text-primary);
+}
+
+.lang-switch {
+    border-radius: 40px;
+    height: 36px;
+    width: 36px;
+    background: var(--color-text-gradient); /* Цвет полоски */
+    font-family: 'SofiaSans', sans-serif; /* Применение шрифта */
+    font-weight: 1000;
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: 0.08em;
+    font-variant: small-caps;
+    color: var(--color-text-primary);
+    cursor: pointer;
+}
+
+/* Контент страницы */
 .brand {
     display: flex; /* Используем flexbox для расположения элементов */
     flex-direction: row; /* Располагаем полоски по вертикали */

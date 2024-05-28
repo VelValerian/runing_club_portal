@@ -14,16 +14,32 @@
 
     <main class="container">
         <header class="header">
-                <!--<div class="logo">
-                    <div class="brand-icon"></div>
-                    <div class="brand-name">NoMondays</div>
-                </div> -->
-                <div class="hamburger-menu" id="hamburger-menu">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-    </header>
+<!--            <a href="#">-->
+<!--                <div class="logo">-->
+<!--                    <div class="brand-icon"></div>-->
+<!--                    <div class="brand-name">NoMondays</div>-->
+<!--                </div>-->
+<!--            </a>-->
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="modal-menu" id="modal-menu">
+        <nav class="menu-nav">
+            <a href="#">главная</a>
+            <a href="#">кто я</a>
+            <a href="#">блог</a>
+            <a href="#">занятия</a>
+            <a href="#">контакты</a>
+        </nav>
+        <button class="lang-switch">EN</button>
+        <div class="close-button" id="close-button">
+            <div class="bar-1"></div>
+            <div class="bar-2"></div>
+        </div>
+    </div>
+        </header>
         <div class="content">
             <div class="brand">
                 <div class="brand-icon"></div>
@@ -41,11 +57,11 @@
 
         </div>
         <footer class="footer">
-            <div class="logo">
+            <a href="#"><div class="logo">
                 <div class="brand-icon"></div>
                 <p class="brand-name">NoMondays</p>
-            </div>
-            <div class="cont-info">
+            </div></a>
+            <a href="#"><div class="cont-info">
                 <div class="location">
                     <div class="icon"></div>
                     <p>г. Москва</p>
@@ -54,14 +70,15 @@
                     <div class="icon"></div>
                     <p>+7 800-123-65-44</p>
                 </div>
-            </div>
-            <div class="soc-icon">
+            </div></a>
+            <a href="#"><div class="soc-icon">
                 <div class="icon-tg"></div>
                 <div class="icon-yt"></div>
                 <div class="icon-inst"></div>
-            </div>
+            </div></a>
         </footer>
     </main>
     <script src="./jscript/dynamic-txt.js"></script>
+    <script src="./jscript/modal-menu.js"></script>
 </body>
 </html>
