@@ -140,6 +140,8 @@ body {
 }
 
 .content {
+    display: flex; /* Используем flexbox для расположения элементов */
+    flex-direction: column; /* Располагаем полоски по вертикали */
     padding: 0px 40px;
 }
 
@@ -247,4 +249,21 @@ body {
     font-variant: small-caps;
     color: var(--color-text-orange);
 
+}
+
+.dynamic {
+    display: flex; /* Используем flexbox для расположения полосок */
+    align-items: center; /* Выравниваем полоски по горизонтали по центру */
+    justify-content: center;
+}
+
+.dynamic-txt {
+    font-family: 'SofiaSans', sans-serif; /* Применение шрифта */
+    font-weight: 1000;
+    font-size: 100px;
+    line-height: 100%;
+    letter-spacing: 0.03em;
+    font-variant: small-caps;
+    text-align: right;
+    color: var(--color-text-secondary);
 }
