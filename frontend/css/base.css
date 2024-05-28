@@ -266,6 +266,7 @@ body {
     align-items: center; /* Выравниваем полоски по горизонтали по центру */
     justify-content: center;
     margin-top: 80px;
+    min-height: 120px; /* Устанавливаем минимальную высоту для блока */
 }
 
 .dynamic-txt {
@@ -277,6 +278,7 @@ body {
     font-variant: small-caps;
     text-align: right;
     color: var(--color-text-secondary);
+    min-height: 1em; /* Устанавливаем минимальную высоту для текста */
 }
 
 .description {
