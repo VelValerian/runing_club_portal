@@ -16,14 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 deleting = true;
                 changeText();
-            }, 1000); // Пауза перед удалением
+            }, 2000); // Пауза перед удалением
         } else if (deleting && charIndex === 0) {
             // слово полностью удалено
             deleting = false;
             currentWordIndex = (currentWordIndex + 1) % words.length;
-            setTimeout(changeText, 500); // Пауза перед началом печати нового слова
+            setTimeout(changeText, 1000); // Пауза перед началом печати нового слова
         } else {
-            setTimeout(changeText, deleting ? 100 : 200); // Скорость удаления и печати
+            setTimeout(changeText, deleting ? 150 : 300); // Скорость удаления и печати
         }
     }
 
