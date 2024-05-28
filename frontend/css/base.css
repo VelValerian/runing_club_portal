@@ -53,9 +53,10 @@
         background-size: cover; /* Устанавливает размер изображения на покрытие всего экрана */
         background-repeat: no-repeat; /* Изображение не повторяется */
         background-position: center center; /* Центрирует изображение */
+        background-attachment: fixed; /* Фиксирует изображение относительно видимой области экрана */
     }
     .container {
-        margin: 12px 4px 0px 4px; /* Отступы: сверху, справа, снизу (0), слева */
+        margin: 14px 4px 0 4px; /* Устанавливает отступы: сверху, справа, снизу, слева */
     }
     .content {
         padding: 0px 16px;
@@ -69,9 +70,10 @@
         background-size: cover; /* Устанавливает размер изображения на покрытие всего экрана */
         background-repeat: no-repeat; /* Изображение не повторяется */
         background-position: center center; /* Центрирует изображение */
+        background-attachment: fixed; /* Фиксирует изображение относительно видимой области экрана */
     }
     .container {
-        margin: 44px 24px 0 24px; /* Отступы: сверху, справа, снизу (0), слева */
+        margin: 44px 24px 0 24px; /* Устанавливает отступы: сверху, справа, снизу, слева */
     }
 }
 
@@ -82,9 +84,10 @@
         background-size: cover; /* Устанавливает размер изображения на покрытие всего экрана */
         background-repeat: no-repeat; /* Изображение не повторяется */
         background-position: center center; /* Центрирует изображение */
+        background-attachment: fixed; /* Фиксирует изображение относительно видимой области экрана */
     }
     .container {
-        margin: 44px 60px 0 60px; /* Отступы: сверху, справа, снизу (0), слева */
+        margin: 44px 60px 0 60px; /* Устанавливает отступы: сверху, справа, снизу, слева */
     }
 }
 
@@ -95,9 +98,10 @@
         background-size: cover; /* Устанавливает размер изображения на покрытие всего экрана */
         background-repeat: no-repeat; /* Изображение не повторяется */
         background-position: center center; /* Центрирует изображение */
+        background-attachment: fixed; /* Фиксирует изображение относительно видимой области экрана */
     }
     .container {
-        margin: 44px 140px 0 140px; /* Отступы: сверху, справа, снизу (0), слева */
+        margin: 44px 140px 0 140px; /* Устанавливает отступы: сверху, справа, снизу, слева */
     }
 }
 
@@ -108,9 +112,10 @@
         background-size: cover; /* Устанавливает размер изображения на покрытие всего экрана */
         background-repeat: no-repeat; /* Изображение не повторяется */
         background-position: center center; /* Центрирует изображение */
+        background-attachment: fixed; /* Фиксирует изображение относительно видимой области экрана */
     }
     .container {
-        margin: 44px 240px 0 240px; /* Отступы: сверху, справа, снизу (0), слева */
+        margin: 44px 240px 0 240px; /* Устанавливает отступы: сверху, справа, снизу, слева */
     }
 }
 
@@ -126,7 +131,7 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding-bottom: 44px;
   min-height: 100vh;
   background-color: var(--color-bg); /* Задаем цвет фона */
 }
