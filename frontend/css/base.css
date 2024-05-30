@@ -512,7 +512,7 @@ body {
 
     .footer {
     flex-direction: column; /* Располагаем полоски по вертикали */
-    gap: 2vh;
+    gap: 4vh;
     margin-top: 20vh;
     }
 
@@ -549,7 +549,7 @@ body {
     }
 
     .soc-icon {
-    gap: 20px;
+    gap: 5vh;
 
     }
 }
