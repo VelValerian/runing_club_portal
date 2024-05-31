@@ -832,34 +832,135 @@ body {
         background-attachment: fixed; /* Фиксирует изображение относительно видимой области экрана */
     }
     .container {
-        margin: 44px 140px 0 140px; /* Устанавливает отступы: сверху, справа, снизу, слева */
+        margin: 56px 36px; /* Устанавливает отступы: сверху, справа, снизу, слева */
+        padding: 60px 36px;
+    }
+
+
+    .header {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+    .header .logo {
+        flex-direction: row;
+        gap: 20px
 
     }
-    .brand .brand-icon {
-        width: 172px; /* Ширина иконки */
-        height: 172px; /* Высота иконки */
+    .header .logo .brand-name {
+        font-size: calc(20px + 2.75vw);
 
     }
-    .brand .brand-txt .brand-name {
-    font-size: 120px;
+    .header .logo .brand-icon {
+        width: calc(16px + 4.5vw);
+        height: calc(16px + 4.5vw);
+    }
+    .header .hamburger-menu {
+        margin-right: 24px;
 
     }
-    .brand .brand-txt .brand-slogan {
-    font-size: 64px;
+
+
+    .modal-menu {
+        flex-direction: row; /* Располагаем элементы по горизонтали */
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        height: auto; /* Автоматическая высота */
+    }
+    .menu-nav {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        gap: 24px;
+    }
+    .menu-nav a {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: calc(4px + 1.5vw);
 
     }
-    .dynamic-txt {
-    font-size: 84px;
+
+
+    .content .brand {
+    flex-direction: row; /* Располагаем полоски по вертикали */
+    align-items: center; /* Выравниваем элементы по вертикали по центру */
+    margin-top: 10vh;
+    gap: 40px;
+    }
+    .content .brand .brand-icon {
+        width: calc(72px + 14.5vw);
+        height: calc(72px + 14.5vw);
+    }
+    .content .brand .brand-txt {
+        align-items: flex-end;
 
     }
-    .description {
-    width: 500px;
+    .content .brand .brand-txt .brand-name {
+        font-size: calc(44px + 7.75vw);
 
     }
-    .description p {
-    font-size: 24px;
+    .content .brand .brand-txt .brand-slogan {
+        font-size: calc(16px + 4.75vw);
 
     }
+
+    .content .dynamic-txt {
+        font-size: calc(30px + 4.75vw);
+
+    }
+
+    .content .description {
+        justify-content: center;
+        margin-top: 20vh;
+
+    }
+    .content .description p {
+        text-align: center;
+        font-size: calc(8px + 1.75vw);
+
+    }
+
+    .footer {
+    flex-direction: row; /* Располагаем полоски по вертикали */
+    gap: 2vh;
+    margin-top: 20vh;
+    }
+
+    .footer .logo {
+        gap: 1vh;
+
+    }
+    .footer .logo .brand-icon {
+        width: calc(4px + 2.75vw);
+        height: calc(4px + 2.75vw);
+    }
+    .footer .logo .brand-name {
+        font-size: calc(8px + 1.75vw);
+
+}
+
+    .footer .cont-info {
+        flex-direction: row; /* Располагаем полоски по вертикали */
+        justify-content: center;
+        gap: 5vh;
+
+    }
+    .footer .cont-info .footer .location .icon {
+        display: none;
+
+    }
+    .footer .cont-info .footer .cont-num .icon {
+        display: none;
+
+    }
+    .footer p {
+    font-size:calc(8px + 1.0vw);
+
+    }
+
 
 }
 
