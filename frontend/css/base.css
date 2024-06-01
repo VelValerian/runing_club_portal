@@ -69,8 +69,6 @@ body {
 
 
 .container {
-    margin: 20px 12px; /* Устанавливает отступы */
-    padding: 24px 12px;
     border-radius: var(--border-radius-large);
     box-shadow:  var(--box-shadow-small);
     backdrop-filter: blur(10px);
@@ -139,8 +137,6 @@ body {
     flex-direction: column; /* Располагаем полоски по вертикали */
     justify-content: space-between; /* Распределяем полоски равномерно с пробелами между ними */
     align-items: center; /* Выравниваем полоски по горизонтали по центру */
-    width: 36px; /* Ширина всего меню */
-    height: 28px; /* Высота всего меню */
     cursor: pointer; /* Курсор меняется на указатель при наведении */
     margin-left: auto;
 }
@@ -177,6 +173,7 @@ body {
     visibility: visible; /* Показываем модальное меню */
     opacity: 1; /* Устанавливаем непрозрачность */
 }
+
 .menu-nav {
     display: flex;
     flex-direction: row;
@@ -262,7 +259,6 @@ body {
 .content .brand .brand-txt .brand-name {
     font-family: 'SofiaSans', sans-serif; /* Применение шрифта */
     font-weight: 1000; /* Установка жирности */
-    font-size: 120px;
     line-height: 100%;
     letter-spacing: 0.05em;
     font-variant: small-caps;
@@ -274,7 +270,6 @@ body {
 .content .brand .brand-txt .brand-slogan {
     font-family: 'SofiaSans', sans-serif; /* Применение шрифта */
     font-weight: 1000;
-    font-size: 64px;
     line-height: 100%;
     letter-spacing: 0.1em;
     font-variant: small-caps;
@@ -322,7 +317,8 @@ body {
     justify-content: space-between; /* Размещаем элементы по краям */
     align-items: center; /* Выравниваем элементы по вертикали по центру */
     width: 100%;
-    margin-top: 20vh;
+    margin-top: 20vw;
+    gap: 10vw;
 }
 
 .footer .logo {
@@ -831,21 +827,19 @@ body {
 @media (min-width: 1025px) and (max-width: 1440px) {
     body{
         background-image: url('../img/bg/bg_1920x1080.png'); /* Замените 'your-image-url.jpg' на URL вашего изображения */
-        background-size: cover; /* Устанавливает размер изображения на покрытие всего экрана */
-        background-repeat: no-repeat; /* Изображение не повторяется */
-        background-position: center center; /* Центрирует изображение */
-        background-attachment: fixed; /* Фиксирует изображение относительно видимой области экрана */
+
     }
     .container {
         margin: 56px 36px; /* Устанавливает отступы: сверху, справа, снизу, слева */
-        padding: 60px 36px;
+        padding: 64px 36px;
     }
 
 
+/* Стили для header */
     .header {
         flex-direction: row;
-        justify-content: center;
-        gap: 20px;
+        justify-content: end;
+
     }
     .header .logo {
         flex-direction: row;
@@ -861,83 +855,108 @@ body {
         height: calc(16px + 4.5vw);
     }
     .header .hamburger-menu {
-        margin-right: 24px;
+        width: 72px; /* Ширина всего меню */
+        height: 56px; /* Высота всего меню */
+        margin-right: 44px;
 
     }
+    .header .hamburger-menu .bar {
+  width: 100%; /* Ширина полоски */
+  height: 8px; /* Высота полоски */
+  background: var(--color-text-gradient); /* Цвет полоски */
+  border-radius: 3px; /* Скругление углов полоски */
+}
+/* Стили для header-main */
+    .header-main {
+        justify-content: end;
+
+    }
+    .header-main .hamburger-menu {
+        width: calc(20px + 2.5vw);
+        height: calc(16px + 2.1vw);
+        margin-right: 44px;
+
+    }
+    .header-main .hamburger-menu .bar {
+        height: 8px; /* Высота полоски */
+
+}
 
 
     .modal-menu {
         flex-direction: row; /* Располагаем элементы по горизонтали */
-        justify-content: space-between;
-        margin: 0;
+        justify-content: flex-end;
+        height: calc(16px + 2.1vw);
+        right: auto;
+        margin-right: 56px;
         padding: 0;
-        height: auto; /* Автоматическая высота */
+        gap: calc(8px + 3.5vw);
+        transition: visibility 0s, opacity 0.5s ease;
     }
     .menu-nav {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        gap: calc(8px + 2.5vw);
 
-        gap: 24px;
     }
     .menu-nav a {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-size: calc(4px + 1.5vw);
+        font-size: calc(4px + 1.2vw);
 
+    }
+    .lang-switch {
+        width: calc(16px + 2.1vw);
+        height: calc(16px + 2.1vw);
+        font-size: calc(4px + 0.8vw);
+
+    }
+
+    .close-button .bar-1, .close-button .bar-2 {
+        width: calc(24px + 1.5vw);
+        height: 8px; /* Высота полосок */
+        background: var(--color-text-primary); /* Цвет полосок */
     }
 
 
     .content .brand {
-    flex-direction: row; /* Располагаем полоски по вертикали */
-    align-items: center; /* Выравниваем элементы по вертикали по центру */
-    margin-top: 10vh;
-    gap: 40px;
+        flex-direction: row; /* Располагаем полоски по вертикали */
+        align-items: center; /* Выравниваем элементы по вертикали по центру */
+        margin-top: 10vw;
     }
     .content .brand .brand-icon {
-        width: calc(72px + 14.5vw);
-        height: calc(72px + 14.5vw);
+        width: calc(72px + 10.5vw);
+        height: calc(72px + 10.5vw);
     }
     .content .brand .brand-txt {
         align-items: flex-end;
 
     }
     .content .brand .brand-txt .brand-name {
-        font-size: calc(44px + 7.75vw);
+        font-size: calc(36px + 7.75vw);
 
     }
     .content .brand .brand-txt .brand-slogan {
-        font-size: calc(16px + 4.75vw);
+        font-size: calc(12px + 4.75vw);
 
     }
 
+    .content .dynamic {
+        min-height: calc(24px + 4.75vw);
+
+    }
     .content .dynamic-txt {
-        font-size: calc(30px + 4.75vw);
+        font-size: calc(24px + 4.75vw);
 
     }
 
-    .content .description {
-        justify-content: center;
-        margin-top: 20vh;
-
-    }
     .content .description p {
-        text-align: center;
-        font-size: calc(8px + 1.75vw);
+        font-size: calc(16px + 0.75vw);
 
     }
 
     .footer {
-    flex-direction: row; /* Располагаем полоски по вертикали */
-    gap: 2vh;
-    margin-top: 20vh;
-    }
-
-    .footer .logo {
-        gap: 1vh;
+    justify-content: center;
 
     }
+
+
     .footer .logo .brand-icon {
         width: calc(4px + 2.75vw);
         height: calc(4px + 2.75vw);
@@ -948,22 +967,23 @@ body {
 }
 
     .footer .cont-info {
-        flex-direction: row; /* Располагаем полоски по вертикали */
         justify-content: center;
-        gap: 5vh;
 
     }
-    .footer .cont-info .footer .location .icon {
-        display: none;
 
-    }
-    .footer .cont-info .footer .cont-num .icon {
-        display: none;
-
+    .cont-icon {
+        fill: var(--color-text-secondary);
+        width: calc(6px + 1.1vw);
+        height: calc(6px + 1.1vw);
     }
     .footer p {
-    font-size:calc(8px + 1.0vw);
+    font-size:calc(4px + 1.0vw);
 
+    }
+    .footer .social-icons .soc-icon {
+        fill: var(--color-text-primary);
+        width: calc(16px + 1.78vw);
+        height: calc(16px + 1.5vw);
     }
 
 }
@@ -1023,6 +1043,7 @@ body {
     }
     .header-main .hamburger-menu .bar {
         height: 8px; /* Высота полоски */
+
 }
 
 
@@ -1035,16 +1056,12 @@ body {
         padding: 0;
         gap: calc(8px + 3.5vw);
         transition: visibility 0s, opacity 0.5s ease;
-
     }
     .menu-nav {
         gap: calc(8px + 3.5vw);
 
     }
     .menu-nav a {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
         font-size: calc(4px + 1.1vw);
 
     }
@@ -1080,6 +1097,7 @@ body {
     }
 
     .content .dynamic {
+        min-height: calc(30px + 4.75vw);
         margin-top: 12vw;
 
 }
@@ -1095,9 +1113,7 @@ body {
 
 
     .footer {
-        flex-direction: row; /* Располагаем полоски по вертикали */
         justify-content: center;
-        gap: 10vw;
         margin-top: 28vw;
     }
 
