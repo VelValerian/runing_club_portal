@@ -427,8 +427,6 @@ body {
         margin-right: 5vw;
         margin-top: 3vw;
         padding: 24px 12px;
-        border-radius: var(--border-radius-small);
-
     }
 
 /* Стили для header */
@@ -704,71 +702,8 @@ body {
     }
 }
 
-/* Для экранов шириной 1025px - 1440px (Высота экрана: 768px - 900px (для планшетов), 900px - 1600px (для десктопов))*/
-@media (min-width: 1025px) and (max-width: 1440px) {
-    body{
-        background-image: url('../img/bg/bg_1920x1080.png'); /* Замените 'your-image-url.jpg' на URL вашего изображения */
-
-    }
-    .container {
-        padding: 64px 36px;
-
-    }
-
-
-/* Стили для header */
-    .header {
-        flex-direction: row;
-        justify-content: end;
-    }
-    .header .logo {
-        flex-direction: row;
-        gap: 20px
-
-    }
-    .header .logo .brand-name {
-        font-size: calc(20px + 2.75vw);
-
-    }
-    .header .logo .brand-icon {
-        width: calc(16px + 4.5vw);
-        height: calc(16px + 4.5vw);
-    }
-    .header .hamburger-menu {
-        width: 72px; /* Ширина всего меню */
-        height: 56px; /* Высота всего меню */
-        margin-right: 44px;
-
-    }
-    .header .hamburger-menu .bar {
-  width: 100%; /* Ширина полоски */
-  height: 8px; /* Высота полоски */
-  background: var(--color-text-gradient); /* Цвет полоски */
-  border-radius: 3px; /* Скругление углов полоски */
-}
-/* Стили для header-main */
-    .header-main .hamburger-menu .bar {
-        height: 5px; /* Высота полоски */
-
-}
-
-    .modal-menu {
-        justify-content: flex-end;
-        right: auto;
-    }
-    .close-button .bar-1, .close-button .bar-2 {
-        height: 5px; /* Высота полосок */
-
-    }
-
-    .content .description p {
-        font-size: calc(16px + 0.75vw);
-
-    }
-}
-
-/* Для экранов шириной 1441px и больше  (Высота экрана: 900px - 1600px и выше)*/
-@media (min-width: 1441px) {
+/* Для экранов шириной 1025px и больше  (Высота экрана: 768px - 1600px и выше)*/
+@media (min-width: 1025px) {
     body{
         background-image: url('../img/bg/bg_1920x1080.png'); /* Замените 'your-image-url.jpg' на URL вашего изображения */
 
