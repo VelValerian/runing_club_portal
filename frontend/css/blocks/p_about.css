@@ -91,13 +91,13 @@ body {
 
 }
 .header .logo .brand-icon {
-    width: 64px; /* Ширина иконки */
-    height: 64px;
+    width: 14em; /* Ширина иконки */
+    height: 14em;
     background-image: url('../../img/icon/logo_256.svg'); /* URL изображения */
     background-size: cover; /* Изображение полностью покрывает элемент */
     background-repeat: no-repeat; /* Изображение не повторяется */
     background-position: center; /* Центрируем изображение */
-    filter: drop-shadow(0 0 20px #ff9500) drop-shadow(0 0 20px #ff7d00); /* Эффект тени под иконкой */
+    filter: drop-shadow(0 0 24px #ff9500) drop-shadow(0 0 20px #ff7d00); /* Эффект тени под иконкой */
 }
 .header .logo .brand-name {
     font-family: 'SofiaSans-Black', sans-serif; /* Применение шрифта */
@@ -143,7 +143,6 @@ body {
     align-items: center; /* Выравниваем элементы по вертикали по центру */
     height: calc(4em + 2.1vw);
     padding: 0;
-    width: 60vw;
     gap: calc(2em + 0.5vw);
     transition: visibility 0s, opacity 0.5s ease;
     visibility: hidden; /* Скрываем модальное меню по умолчанию */
@@ -442,6 +441,7 @@ body {
         margin-top: 5vw;
         padding: 6vw;
         top: 0;
+        width: 60vw;
         gap: calc(5em + 3.5vw);
         background-color: hsl(248, 40%, 15%, 0.95);
         border-radius: var(--border-radius-small);
@@ -566,6 +566,7 @@ body {
         margin-top: 5vw;
         padding: 6vw;
         top: 0;
+        width: 60vw;
         gap: calc(8em + 3.5vw);
         background-color: hsl(248, 40%, 15%, 0.95);
         border-radius: var(--border-radius-small);
@@ -647,68 +648,121 @@ body {
 
     }
     .container {
-        padding: 52px 32px;
+        padding: 11em 7em;
 
     }
 
 /* Стили для header */
     .header {
-        justify-content: flex-end;
+        align-items: flex-end;
+        justify-content: center;
+        position: relative;
 
     }
     .header .logo {
-        flex-direction: row;
-        gap: 20px
+        gap: 2vw;
 
     }
     .header .logo .brand-name {
-        font-size: calc(20px + 3.75vw);
+        font-size: calc(1em + 3.15vw);
 
     }
     .header .logo .brand-icon {
-        width: calc(16px + 5.5vw);
-        height: calc(16px + 5.5vw);
+    width: calc(2em + 4.15vw);
+    height: calc(2em + 4.15vw);
+    filter: drop-shadow(0 0 16px #ff9500) drop-shadow(0 0 8px #ff7d00); /* Эффект тени под иконкой */
     }
     .header .hamburger-menu {
-        width: calc(12em + 1.0vw);
-        height: calc(8em + 1.1vw);
+    width: calc(6em + 3.0vw);
+    height: calc(4em + 3.3vw);
+    margin-left: auto;
+    margin-right: calc(2em + 2.1vw);
     }
     .header .hamburger-menu .bar {
-        height: calc(1em + 0.4vw); /* Высота полоски */
+        height: calc(1em + 0.16vw);
 
-}
+    }
 
 /* Стили модалки */
     .modal-menu {
-        justify-content: flex-end;
-        right: auto;
-        margin-right: calc(2em + 2.1vw);
-        gap: calc(3em + 1.5vw);
+        height: auto; /* Автоматическая высота */
+        gap: calc(1em + 1.5vw);
+        transition: visibility 0.5s, opacity 0.5s ease;
+        position: absolute;
+        top: 150%; /* Позиционируем модальное меню под заголовком */
     }
-    .menu-nav a {
-        font-size: calc(0.5em + 1.6vw);
+    .modal-menu.open {
+        visibility: visible; /* Показываем модальное меню */
+        opacity: 1; /* Устанавливаем непрозрачность */
 
     }
-    .close-button .bar-1, .close-button .bar-2 {
-        width: calc(4em + 1.0vw);
+    .menu-nav {
+        gap: calc(5em + 0.5vw);
+    }
+    .menu-nav a {
+        text-align: center;
+        font-size: calc(3em + 1.2vw);
 
     }
     .lang-switch {
         width: calc(2em + 1.1vw);
         height: calc(2em + 1.1vw);
         font-size: calc(2em + 0.75vw);
+
     }
 
 /* Стили контента страницы */
+    .content {
+        margin-top: 10vw;
+
+    }
+    .blocks-about {
+        align-items: center;
+
+    }
+    .block {
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .about-img {
+        width: 45vw;
+        height: 45vw;
+    }
+    .about-title-block {
+        width: 55vw;
+        font-size: calc(2em + 1.75vw);
+
+    }
+    .about-text-block p {
+        width: 70vw;
+        font-size:calc(1em + 1.1vw);
+        text-indent: 2em; /* Отступ первой строки на 2 em */
+        line-height: 135%;
+
+    }
 
 /* Стили подвала */
     .footer {
         justify-content: center;
 
     }
-    .footer .logo .brand-icon {
-        filter: drop-shadow(0 0 16px #ff9500) drop-shadow(0 0 10px #ff7d00); /* Эффект тени под иконкой */
 
+    .footer .logo .brand-name {
+        font-size: calc(2em + 2.15vw);
+
+    }
+    .footer p {
+        font-size:calc(2em + 0.55vw);
+
+    }
+    .cont-icon {
+        display: none;
+
+    }
+    .footer .social-icons .soc-icon {
+        width: calc(4em + 1.78vw);
+        height: calc(4em + 1.5vw);
     }
 
 }
