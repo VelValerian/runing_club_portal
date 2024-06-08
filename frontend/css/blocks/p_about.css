@@ -1,41 +1,41 @@
 @font-face {
-    font-family: 'SofiaSans'; /* Name of font */
-    src: url('../fonts/SofiaSans-ExtraLight.woff2') format('woff2'); /*source url */
+    font-family: 'SofiaSans-ExtraLight'; /* Name of font */
+    src: url('../../fonts/SofiaSans-ExtraLight.woff2') format('woff2'); /*source url */
     font-weight: 200; /* check prop of fonts for this param */
     font-style: normal; /* needed style */
     font-display: swap; /* to render text if the font file is not loaded */
 }
 @font-face {
-    font-family: 'SofiaSans'; /* Name of font */
-    src: url('../fonts/SofiaSans-Light.woff2') format('woff2'); /*source url */
+    font-family: 'SofiaSans-Light'; /* Name of font */
+    src: url('../../fonts/SofiaSans-Light.woff2') format('woff2'); /*source url */
     font-weight: 300; /* check prop of fonts for this param */
     font-style: normal; /* needed style */
     font-display: swap; /* to render text if the font file is not loaded */
 }
 @font-face {
-    font-family: 'SofiaSans'; /* Name of font */
-    src: url('../fonts/SofiaSans-SemiBold.woff2') format('woff2'); /*source url */
+    font-family: 'SofiaSans-SemiBold'; /* Name of font */
+    src: url('../../fonts/SofiaSans-SemiBold.woff2') format('woff2'); /*source url */
     font-weight: 600; /* check prop of fonts for this param */
     font-style: normal; /* needed style */
     font-display: swap; /* to render text if the font file is not loaded */
 }
 @font-face {
-    font-family: 'SofiaSans'; /* Name of font */
-    src: url('../fonts/SofiaSans-Bold.woff2') format('woff2'); /*source url */
+    font-family: 'SofiaSans-Bold'; /* Name of font */
+    src: url('../../fonts/SofiaSans-Bold.woff2') format('woff2'); /*source url */
     font-weight: 700; /* check prop of fonts for this param */
     font-style: normal; /* needed style */
     font-display: swap; /* to render text if the font file is not loaded */
 }
 @font-face {
-    font-family: 'SofiaSans'; /* Name of font */
-    src: url('../fonts/SofiaSans-ExtraBold.woff2') format('woff2'); /*source url */
+    font-family: 'SofiaSans-ExtraBold'; /* Name of font */
+    src: url('../../fonts/SofiaSans-ExtraBold.woff2') format('woff2'); /*source url */
     font-weight: 800; /* check prop of fonts for this param */
     font-style: normal; /* needed style */
     font-display: swap; /* to render text if the font file is not loaded */
 }
 @font-face {
-    font-family: 'SofiaSans'; /* Name of font */
-    src: url('../fonts/SofiaSans-Black.woff2') format('woff2'); /*source url */
+    font-family: 'SofiaSans-Black'; /* Name of font */
+    src: url('../../fonts/SofiaSans-Black.woff2') format('woff2'); /*source url */
     font-weight: 900; /* check prop of fonts for this param */
     font-style: normal; /* needed style */
     font-display: swap; /* to render text if the font file is not loaded */
@@ -57,6 +57,7 @@
 }
 
 body {
+    font-size: 4px;
     margin: 0;
     background-color: var(--color-bg); /* Задаем цвет фона */
     background-size: cover; /* Устанавливает размер изображения на покрытие всего экрана */
@@ -67,8 +68,8 @@ body {
     }
 .container {
     margin-top: 3vw;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 6vw;
+    margin-right: 6vw;
     border-radius: var(--border-radius-large);
     backdrop-filter: blur(6px);
     box-shadow:  var(--box-shadow-large);
@@ -78,9 +79,8 @@ body {
 /* Стили для header */
 .header {
     display: flex; /* Используем flexbox для расположения элементов */
-    align-items: center; /* Выравниваем элементы по вертикали по центру */
-    margin: 0 2vw;
-
+    align-items: flex-end;
+    justify-content: center;
 }
 .header .logo{
     display: flex; /* Используем flexbox для расположения элементов */
@@ -100,7 +100,7 @@ body {
     filter: drop-shadow(0 0 20px #ff9500) drop-shadow(0 0 20px #ff7d00); /* Эффект тени под иконкой */
 }
 .header .logo .brand-name {
-    font-family: 'SofiaSans', sans-serif; /* Применение шрифта */
+    font-family: 'SofiaSans-Black', sans-serif; /* Применение шрифта */
     font-weight: 1000; /* Установка жирности */
     line-height: 100%;
     letter-spacing: 0.1em;
@@ -115,17 +115,17 @@ body {
     flex-direction: column; /* Располагаем полоски по вертикали */
     justify-content: space-between; /* Распределяем полоски равномерно с пробелами между ними */
     align-items: center; /* Выравниваем полоски по горизонтали по центру */
-    width: calc(20px + 2.5vw);
-    height: calc(12px + 2.1vw);
-    margin-right: 2vw;
-
     cursor: pointer; /* Курсор меняется на указатель при наведении */
+    width: calc(6em + 1.0vw);
+    height: calc(4em + 1.1vw);
+    margin-left: auto;
+    margin-right: calc(2em + 2.1vw);
 }
 .header .hamburger-menu .bar {
-  width: 100%; /* Ширина полоски */
-  height: 2.5px; /* Высота полоски */
-  background: var(--color-text-gradient); /* Цвет полоски */
-  border-radius: 3px; /* Скругление углов полоски */
+    width: 100%; /* Ширина полоски */
+    height: 1em; /* Высота полоски */
+    background: var(--color-text-gradient); /* Цвет полоски */
+    border-radius: 3px; /* Скругление углов полоски */
 }
 .logo.hidden {
     display: none; /* Скрываем hamburger-menu */
@@ -141,11 +141,10 @@ body {
     display: flex; /* Используем flexbox для расположения элементов */
     flex-direction: row; /* Располагаем элементы по горизонтали */
     align-items: center; /* Выравниваем элементы по вертикали по центру */
-    height: calc(16px + 2.1vw);
-    margin-right: 2vw;
+    height: calc(4em + 2.1vw);
     padding: 0;
     width: 60vw;
-    gap: calc(8px + 0.5vw);
+    gap: calc(2em + 0.5vw);
     transition: visibility 0s, opacity 0.5s ease;
     visibility: hidden; /* Скрываем модальное меню по умолчанию */
     opacity: 0; /* Прозрачность по умолчанию */
@@ -158,37 +157,41 @@ body {
 .menu-nav {
     display: flex;
     flex-direction: row;
-    gap: calc(8px + 1.2vw);
+    gap: calc(2em + 1.2vw);
 }
 .menu-nav a {
     text-decoration: none;
-    font-family: 'SofiaSans', sans-serif; /* Применение шрифта */
-    font-weight: 900;
+    font-family: 'SofiaSans-ExtraBold', sans-serif; /* Применение шрифта */
     line-height: 120%;
     letter-spacing: 0.08em;
     font-variant: small-caps;
-    font-size: calc(4px + 0.8vw);
+    font-size: calc(3em + 1.2vw);
     color: var(--color-text-primary);
 }
 .lang-switch {
-    border-radius: 40px;
-    background: var(--color-text-gradient); /* Цвет полоски */
-    font-family: 'SofiaSans', sans-serif; /* Применение шрифта */
-    font-weight: 1000;
+    display: flex; /* Включаем Flexbox */
+    justify-content: center; /* Горизонтальное центрирование */
+    align-items: center; /* Вертикальное центрирование */
+
+    font-family: 'SofiaSans-Black', sans-serif; /* Применение шрифта */
     line-height: 120%;
     letter-spacing: 0.08em;
     font-variant: small-caps;
-    width: calc(16px + 1.7vw);
-    height: calc(16px + 1.7vw);
-    font-size: calc(4px + 0.6vw);
     color: var(--color-text-primary);
     cursor: pointer;
+
+    border-radius: 40px;
+    background: var(--color-text-gradient); /* Цвет полоски */
+
+    width: calc(3em + 1.1vw);
+    height: calc(3em + 1.1vw);
+    font-size: calc(2em + 0.75vw);
 }
 
 .close-button {
   position: relative; /* Используем относительное позиционирование */
-  width: 36px; /* Ширина всего меню */
-  height: 36px; /* Высота всего меню */
+  width: 9em; /* Ширина всего меню */
+  height: 9em; /* Высота всего меню */
   cursor: pointer; /* Курсор меняется на указатель при наведении */
 
 }
@@ -196,8 +199,8 @@ body {
   position: absolute; /* Абсолютное позиционирование полосок */
   top: 50%; /* Центрируем полоски по вертикали */
   left: 50%; /* Центрируем полоски по горизонтали */
-  width: calc(8px + 1.5vw);
-  height: 4px; /* Высота полосок (их длина) */
+  width: calc(5em + 1.0vw);
+  height: 1em; /* Высота полосок (их длина) */
   background: var(--color-text-primary); /* Цвет полосок */
   border-radius: 3px; /* Скругление углов полосок */
   transform-origin: center; /* Центрируем точку вращения */
@@ -217,17 +220,16 @@ body {
     flex-direction: column; /* Располагаем полоски по вертикали */
     align-items: center;
     margin-top: 5vw;
-    padding: 0 10vw;
     width: 100%;
 
 }
+
 .page-title {
-    font-family: 'SofiaSans', sans-serif; /* Применение шрифта */
-    font-weight: 200; /* Установка жирности */
+    font-family: 'SofiaSans-ExtraLight', sans-serif; /* Применение шрифта */
     line-height: 100%;
     letter-spacing: 0.05em;
     font-variant: small-caps;
-    font-size: calc(28px + 5.75vw);
+    font-size: calc(7em + 5.75vw);
     color: var(--color-text-primary);
     margin-top: 5vw;
 
@@ -243,14 +245,13 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 5vw;
-    margin-bottom: 5vw;
+    margin-top: 10vw;
     gap: 5vw;
 }
-.about-img-1, .about-img-2, .about-img-3 {
+.about-img {
     width: 30vw;
     height: 30vw;
-    border-radius: 20px;
+    border-radius: 10%;
     box-shadow: 0 -3px 10px 0 rgba(255, 255, 255, 0.05), 0 0 10px 0 rgba(255, 255, 255, 0.1), inset 0 2px 5px 0 rgba(0, 0, 0, 0.5), inset 0 -2px 5px 0 rgba(255, 255, 255, 0.1);
     background: rgba(0, 0, 0, 0.15);
     background-size: cover; /* Изображение полностью покрывает элемент */
@@ -259,18 +260,19 @@ body {
 
 }
 
-.about-img-1 {
-    background-image: url('../img/about/img_1.webp'); /* URL изображения */
+.about-img[data-img="1"] {
+    background-image: url('../../img/about/img_1.webp'); /* URL изображения */
 
 }
-.about-img-2{
-    background-image: url('../img/about/img_2.webp'); /* URL изображения */
+.about-img[data-img="2"] {
+    background-image: url('../../img/about/img_2.webp'); /* URL изображения */
 
 }
-.about-img-3 {
-    background-image: url('../img/about/img_3.webp'); /* URL изображения */
+.about-img[data-img="3"] {
+    background-image: url('../../img/about/img_3.webp'); /* URL изображения */
 
 }
+
 
 .about-txt {
     display: flex;
@@ -279,36 +281,34 @@ body {
     gap: 2vw;
 }
 .about-title-block {
-    font-family: 'SofiaSans', sans-serif; /* Применение шрифта */
-    font-weight: 900;
-    line-height: 117%;
+    font-family: 'SofiaSans-ExtraBold', sans-serif; /* Применение шрифта */
+    line-height: 115%;
     letter-spacing: 0.12em;
     font-variant: small-caps;
-    font-size: calc(8px + 0.75vw);
+    font-size: calc(3em + 1.75vw);
     color: var(--color-text-orange);
     text-align: left;
 
 }
 .about-text-block {
-    width: 30vw;
-    font-family: 'SofiaSans', sans-serif; /* Применение шрифта */
-    font-weight: 700;
-    line-height: 117%;
-    letter-spacing: 0.12em;
+    width: 100%;
+    font-family: 'SofiaSans-SemiBold', sans-serif; /* Применение шрифта */
+    line-height: 120%;
+    letter-spacing: 0.15em;
     font-variant: small-caps;
-    font-size: calc(8px + 0.75vw);
+    font-size:calc(2em + 0.75vw);
     color: var(--color-text-primary);
     text-align: left;
 }
 
-/* Стили для footer */
+
+/* Стили для подвала */
 .footer {
     display: flex; /* Используем flexbox для расположения элементов */
     flex-direction: row; /* Располагаем полоски по вертикали */
-    justify-content: center;
     align-items: center; /* Выравниваем элементы по вертикали по центру */
     width: 100%;
-    margin-top: 15vw;
+    margin-top: 20vw;
     gap: 5vw;
 }
 
@@ -319,8 +319,8 @@ body {
     gap: 0.8vw;
 }
 .footer .logo .brand-icon {
-    width: calc(16px + 1.78vw);
-    height: calc(16px + 1.5vw);
+    width: calc(3em + 2.6vw);
+    height: calc(3em + 2.9vw);
     background-image: url('../../img/icon/logo_256.svg'); /* URL изображения */
     background-size: cover; /* Изображение полностью покрывает элемент */
     background-repeat: no-repeat; /* Изображение не повторяется */
@@ -328,12 +328,11 @@ body {
     filter: drop-shadow(0 0 16px #ff9500) drop-shadow(0 0 8px #ff7d00); /* Эффект тени под иконкой */
 }
 .footer .logo .brand-name {
-    font-family: 'SofiaSans', sans-serif; /* Применение шрифта */
-    font-weight: 1000; /* Установка жирности */
+    font-family: 'SofiaSans-SemiBold', sans-serif; /* Применение шрифта */
     line-height: 100%;
     letter-spacing: 0.1em;
     font-variant: small-caps;
-    font-size: calc(16px + 0.75vw);
+    font-size: calc(2em + 2.15vw);
     background: var(--color-text-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -361,18 +360,17 @@ body {
     gap: 0.5vw;
 }
 .footer .cont-info .cont-icon {
-    width: calc(8px + 1.0vw);
-    height: calc(8px + 1.2vw);
+    width: calc(2em + 1.0vw);
+    height: calc(2em + 1.2vw);
     fill: var(--color-text-secondary);
 }
 
 .footer p {
-    font-family: 'SofiaSans', sans-serif; /* Применение шрифта */
-    font-weight: 700;
+    font-family: 'SofiaSans-SemiBold', sans-serif; /* Применение шрифта */
     line-height: 117%;
     letter-spacing: 0.12em;
     font-variant: small-caps;
-    font-size:calc(4px + 0.75vw);
+    font-size:calc(1em + 0.75vw);
     color: var(--color-text-primary);
 
 }
@@ -385,52 +383,56 @@ body {
 }
 .footer .social-icons .soc-icon {
         fill: var(--color-text-primary);
-        width: calc(16px + 1.78vw);
-        height: calc(16px + 1.5vw);
+        width: calc(3em + 2.6vw);
+        height: calc(3em + 2.9vw);
     }
 
 /* Для экранов шириной 320px - 480px  (Высота экрана: 480px - 800px)*/
 @media (max-width: 480px) {
     body {
-        background-image: url('../img/bg/bg_360x800.png'); /* Замените 'your-image-url.jpg' на URL вашего изображения */
+        background-image: url('../../img/bg/bg_360x800.png'); /* Замените 'your-image-url.jpg' на URL вашего изображения */
 
     }
     .container {
         margin-left: 5vw;
         margin-right: 5vw;
         margin-top: 3vw;
-        padding: 24px 12px;
+        padding: 6em 3em;
     }
 
     /* Стили для header */
     .header {
-        flex-direction: row;
-        justify-content: space-between;
-        margin: 0 2vw;
+        flex-direction: column-reverse;
+        align-items: center;
+
     }
     .header .logo {
-        flex-direction: row;
-        gap: 2vw;
+        flex-direction: column;
+        gap: 4vw;
 
     }
     .header .logo .brand-name {
-        font-size: calc(8px + 2.75vw); /* 320px -> 42px / 480px -> 48px */
+        font-size: calc(2em + 6.15vw);
 
     }
     .header .logo .brand-icon {
-    width: calc(16px + 1.78vw);
-    height: calc(16px + 1.5vw);
+    width: calc(2em + 10.15vw);
+    height: calc(2em + 10.15vw);
     filter: drop-shadow(0 0 16px #ff9500) drop-shadow(0 0 8px #ff7d00); /* Эффект тени под иконкой */
     }
+    .header .hamburger-menu .bar {
+        height: calc(0.6em + 0.1vw);
 
+    }
 
+/* Стили модалки */
     .modal-menu {
         flex-direction: column; /* Располагаем элементы по горизонтали */
         height: auto; /* Автоматическая высота */
         margin-top: 5vw;
         padding: 6vw;
         top: 0;
-        gap: calc(8px + 3.5vw);
+        gap: calc(5em + 3.5vw);
         background-color: hsl(248, 40%, 15%, 0.95);
         border-radius: var(--border-radius-small);
         transition: visibility 0.5s, opacity 0.5s ease;
@@ -439,40 +441,56 @@ body {
     }
     .menu-nav {
         flex-direction: column;
-
+        gap: calc(8em + 1.2vw);
     }
     .menu-nav a {
         text-align: center;
-        font-size: calc(12px + 1.2vw);
-    }
-    .close-button .bar-1, .close-button .bar-2 {
-        width: calc(24px + 1.0vw);
 
     }
+    .lang-switch {
+        width: calc(3em + 1.1vw);
+        height: calc(3em + 1.1vw);
+        font-size: calc(2em + 0.75vw);
 
+    }
 
+/* Стили контента страницы */
+    .blocks-about {
+        align-items: center;
+
+    }
     .block {
         flex-direction: column;
 
     }
-    .about-img-1, .about-img-2, .about-img-3 {
+    .about-img {
         width: 55vw;
         height: 55vw;
-        border-radius: 10px;
+    }
+    .about-title-block {
+        width: 55vw;
+        font-size: calc(2em + 1.75vw);
+
     }
     .about-text-block {
         width: 55vw;
+        font-size:calc(2em + 0.75vw);
 
     }
 
+/* Стили подвала */
     .footer {
         flex-direction: column;
         gap: 3vw;
 
     }
 
+    .footer .logo .brand-name {
+        font-size: calc(2em + 2.15vw);
+
+    }
     .footer p {
-        font-size:calc(8px + 0.55vw);
+        font-size:calc(2em + 0.55vw);
 
     }
     .cont-icon {
@@ -480,8 +498,8 @@ body {
 
     }
     .footer .social-icons .soc-icon {
-        width: calc(16px + 1.78vw);
-        height: calc(16px + 1.5vw);
+        width: calc(4em + 1.78vw);
+        height: calc(4em + 1.5vw);
     }
 
 
@@ -490,18 +508,19 @@ body {
 /* Для экранов шириной 481px - 768px (Высота экрана: 800px - 1280px)*/
 @media (min-width: 481px) and (max-width: 768px) {
     body{
-        background-image: url('../img/bg/bg_1280x720.png'); /* Замените 'your-image-url.jpg' на URL вашего изображения */
+        background-image: url('../../img/bg/bg_1280x720.png'); /* Замените 'your-image-url.jpg' на URL вашего изображения */
 
     }
     .container {
-        padding: 44px 28px;
+        padding: 11em 7em;
 
     }
 
 /* Стили для header */
     .header {
         flex-direction: column-reverse;
-        gap: 20px;
+        align-items: center;
+
     }
     .header .logo {
         flex-direction: column;
@@ -516,18 +535,22 @@ body {
         height: calc(24px + 7.5vw);
     }
     .header .hamburger-menu {
-        margin-right: 14px;
+        width: calc(12em + 1.0vw);
+        height: calc(8em + 1.1vw);
+    }
+    .header .hamburger-menu .bar {
+        height: calc(0.5em + 0.6vw); /* Высота полоски */
 
     }
+
 
     .modal-menu {
         flex-direction: column; /* Располагаем элементы по горизонтали */
         height: auto; /* Автоматическая высота */
-        margin-top: 10vw;
-        margin-right: 0;
+        margin-top: 5vw;
         padding: 6vw;
         top: 0;
-        gap: calc(8px + 3.5vw);
+        gap: calc(5em + 3.5vw);
         background-color: hsl(248, 40%, 15%, 0.95);
         border-radius: var(--border-radius-small);
         transition: visibility 0.5s, opacity 0.5s ease;
@@ -540,14 +563,16 @@ body {
     }
     .menu-nav a {
         text-align: center;
-        font-size: calc(12px + 1.2vw);
-    }
-    .close-button .bar-1, .close-button .bar-2 {
-        width: calc(24px + 1.0vw);
 
     }
+    .lang-switch {
+        width: calc(3em + 0.2vw);
+        height: calc(3em + 0.2vw);
+        font-size: calc(2em + 0.9vw);
 
+    }
 
+/* Стили контента страницы */
     .block {
         flex-direction: column;
 
@@ -560,28 +585,27 @@ body {
     }
     .about-text-block {
         width: 55vw;
+
     }
 
-
-
+/* Стили подвала */
     .footer {
         flex-direction: column;
         gap: 3vw;
 
     }
 
+    .footer .logo .brand-name {
+        font-size: calc(2em + 2.15vw);
 
+    }
     .footer p {
-        font-size:calc(8px + 0.55vw);
+        font-size:calc(2em + 0.55vw);
 
     }
     .cont-icon {
         display: none;
 
-    }
-    .footer .social-icons .soc-icon {
-        width: calc(16px + 1.78vw);
-        height: calc(16px + 1.5vw);
     }
 
 }
@@ -589,7 +613,7 @@ body {
 /* Для экранов шириной 769px - 1024px (Высота экрана: 1024px - 1366px)*/
 @media (min-width: 769px) and (max-width: 1024px) {
     body{
-        background-image: url('../img/bg/bg_1280x720.png'); /* Замените 'your-image-url.jpg' на URL вашего изображения */
+        background-image: url('../../img/bg/bg_1280x720.png'); /* Замените 'your-image-url.jpg' на URL вашего изображения */
 
     }
     .container {
@@ -599,9 +623,8 @@ body {
 
 /* Стили для header */
     .header {
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
+        justify-content: flex-end;
+
     }
     .header .logo {
         flex-direction: row;
@@ -617,17 +640,44 @@ body {
         height: calc(16px + 5.5vw);
     }
     .header .hamburger-menu {
-        margin-right: 14px;
-
+        width: calc(12em + 1.0vw);
+        height: calc(8em + 1.1vw);
     }
+    .header .hamburger-menu .bar {
+        height: calc(1em + 0.4vw); /* Высота полоски */
 
+}
 
+/* Стили модалки */
     .modal-menu {
         justify-content: flex-end;
         right: auto;
+        margin-right: calc(2em + 2.1vw);
+        gap: calc(3em + 1.5vw);
+    }
+    .menu-nav a {
+        font-size: calc(0.5em + 1.6vw);
+
     }
     .close-button .bar-1, .close-button .bar-2 {
+        width: calc(4em + 1.0vw);
 
+    }
+    .lang-switch {
+        width: calc(2em + 1.1vw);
+        height: calc(2em + 1.1vw);
+        font-size: calc(2em + 0.75vw);
+    }
+
+/* Стили контента страницы */
+
+/* Стили подвала */
+    .footer {
+        justify-content: center;
+
+    }
+    .footer .logo .brand-icon {
+        filter: drop-shadow(0 0 16px #ff9500) drop-shadow(0 0 10px #ff7d00); /* Эффект тени под иконкой */
 
     }
 
@@ -636,15 +686,21 @@ body {
 /* Для экранов шириной 1025px и больше  (Высота экрана: 768px - 1600px и выше)*/
 @media (min-width: 1025px) {
     body{
-        background-image: url('../img/bg/bg_1920x1080.png'); /* Замените 'your-image-url.jpg' на URL вашего изображения */
+        background-image: url('../../img/bg/bg_1920x1080.png'); /* Замените 'your-image-url.jpg' на URL вашего изображения */
 
     }
     .container {
-        backdrop-filter: blur(12px);
-        padding: 72px 44px;
+        backdrop-filter: blur(2em);
+        padding: 18em 11em;
+        border-radius: 60px;
+
     }
 
 /* Стили для header */
+    .header {
+        justify-content: flex-end;
+
+    }
     .header .logo {
         flex-direction: row;
         gap: 20px
@@ -659,19 +715,53 @@ body {
         height: calc(16px + 4.5vw);
     }
     .header .hamburger-menu {
-        width: calc(20px + 2.5vw);
-        height: calc(16px + 2.1vw);
-
+        width: calc(12em + 3vw);
+        height: calc(8em + 3vw);
     }
     .header .hamburger-menu .bar {
-        width: 100%; /* Ширина полоски */
-        height: 8px; /* Высота полоски */
-        background: var(--color-text-gradient); /* Цвет полоски */
-        border-radius: 3px; /* Скругление углов полоски */
+        height: calc(2em + 0.3vw); /* Высота полоски */
+        border-radius: 1.5em; /* Скругление углов полоски */
     }
 
+/* Стили модалки */
+    .modal-menu {
+        justify-content: flex-end;
+        right: auto;
+        margin-right: calc(2em + 2.1vw);
+        gap: calc(3em + 1.5vw);
+    }
+    .menu-nav a {
+        font-size: calc(0.5em + 1.6vw);
 
+    }
+    .close-button .bar-1, .close-button .bar-2 {
+        width: calc(4em + 1.0vw);
+
+    }
+    .lang-switch {
+        width: calc(2em + 1.1vw);
+        height: calc(2em + 1.1vw);
+        font-size: calc(2em + 0.75vw);
+    }
+
+/* Стили контента страницы */
     .about-text-block {
         font-size: calc(20px + 0.75vw);
+
     }
+
+/* Стили подвала */
+    .footer {
+        justify-content: center;
+
+    }
+    .footer .logo .brand-icon {
+        filter: drop-shadow(0 0 16px #ff9500) drop-shadow(0 0 10px #ff7d00); /* Эффект тени под иконкой */
+
+    }
+    .footer .social-icons .soc-icon {
+        fill: var(--color-text-primary);
+
+    }
+
 }

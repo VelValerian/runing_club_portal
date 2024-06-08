@@ -70,7 +70,7 @@ body {
     margin-top: 3vw;
     margin-left: 6vw;
     margin-right: 6vw;
-    border-radius: var(--border-radius-large);
+    border-radius: 5%;
     backdrop-filter: blur(6px);
     box-shadow:  var(--box-shadow-large);
     background: hsl(0, 0%, 0%, 0.15);
@@ -473,6 +473,7 @@ body {
     }
     .header-main .hamburger-menu .bar {
         height: calc(0.5em + 0.6vw); /* Высота полоски */
+
     }
 
     .modal-menu {
@@ -596,6 +597,7 @@ body {
         filter: drop-shadow(0 0 16px #ff9500) drop-shadow(0 0 10px #ff7d00); /* Эффект тени под иконкой */
 
     }
+
 }
 
 
@@ -637,6 +639,7 @@ body {
     }
     .close-button .bar-1, .close-button .bar-2 {
         width: calc(4em + 1.0vw);
+        height: 1.5em;
 
     }
     .lang-switch {
@@ -661,6 +664,7 @@ body {
     }
     .footer .social-icons .soc-icon {
         fill: var(--color-text-primary);
+
     }
 
 }
