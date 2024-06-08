@@ -352,8 +352,8 @@ body {
 }
 .footer .social-icons .soc-icon {
         fill: var(--color-text-primary);
-        width: calc(4em + 1.78vw);
-        height: calc(3em + 1.5vw);
+        width: calc(3em + 2.6vw);
+        height: calc(3em + 2.9vw);
     }
 
 /* Для экранов шириной 320px - 480px  (Высота экрана: 480px - 800px)*/
@@ -467,6 +467,13 @@ body {
         align-items: center;
 
     }
+    .header-main .hamburger-menu {
+        width: calc(12em + 1.0vw);
+        height: calc(8em + 1.1vw);
+    }
+    .header-main .hamburger-menu .bar {
+        height: calc(0.5em + 0.6vw); /* Высота полоски */
+    }
 
     .modal-menu {
         flex-direction: column; /* Располагаем элементы по горизонтали */
@@ -526,10 +533,6 @@ body {
         display: none;
 
     }
-    .footer .social-icons .soc-icon {
-        width: calc(4em + 1.78vw);
-        height: calc(4em + 1.5vw);
-    }
 
 }
 
@@ -545,8 +548,16 @@ body {
     }
 
 /* Стили для header-main */
+    .header-main {
+        justify-content: flex-end;
+
+    }
+    .header-main .hamburger-menu {
+        width: calc(12em + 1.0vw);
+        height: calc(8em + 1.1vw);
+    }
     .header-main .hamburger-menu .bar {
-        height: 5px; /* Высота полоски */
+        height: calc(1em + 0.4vw); /* Высота полоски */
 
 }
 
@@ -554,18 +565,39 @@ body {
     .modal-menu {
         justify-content: flex-end;
         right: auto;
+        margin-right: calc(2em + 2.1vw);
+        gap: calc(3em + 1.5vw);
+    }
+    .menu-nav a {
+        font-size: calc(0.5em + 1.6vw);
+
     }
     .close-button .bar-1, .close-button .bar-2 {
-
+        width: calc(4em + 1.0vw);
 
     }
-
+    .lang-switch {
+        width: calc(2em + 1.1vw);
+        height: calc(2em + 1.1vw);
+        font-size: calc(2em + 0.75vw);
+    }
 
     .content .description p {
         font-size: calc(8px + 1.55vw);
 
     }
+
+
+    .footer {
+        justify-content: center;
+
+    }
+    .footer .logo .brand-icon {
+        filter: drop-shadow(0 0 16px #ff9500) drop-shadow(0 0 10px #ff7d00); /* Эффект тени под иконкой */
+
+    }
 }
+
 
 /* Для экранов шириной 1025px и больше  (Высота экрана: 768px - 1600px и выше)*/
 @media (min-width: 1025px) {
@@ -574,31 +606,61 @@ body {
 
     }
     .container {
-        backdrop-filter: blur(12px);
-        padding: 72px 44px;
+        backdrop-filter: blur(2em);
+        padding: 18em 11em;
     }
 
 /* Стили для header-main */
-    .header-main .hamburger-menu .bar {
-        height: 8px; /* Высота полоски */
+    .header-main {
+        justify-content: flex-end;
 
-}
+    }
+    .header-main .hamburger-menu {
+        width: calc(12em + 3vw);
+        height: calc(8em + 3vw);
+    }
+    .header-main .hamburger-menu .bar {
+        height: calc(2em + 0.3vw); /* Высота полоски */
+        border-radius: 1.5em; /* Скругление углов полоски */
+    }
+
 
     .modal-menu {
         justify-content: flex-end;
         right: auto;
+        margin-right: calc(2em + 2.1vw);
+        gap: calc(3em + 1.5vw);
+    }
+    .menu-nav a {
+        font-size: calc(0.5em + 1.6vw);
+
     }
     .close-button .bar-1, .close-button .bar-2 {
-        height: 5px; /* Высота полосок */
+        width: calc(4em + 1.0vw);
 
     }
-
+    .lang-switch {
+        width: calc(2em + 1.1vw);
+        height: calc(2em + 1.1vw);
+        font-size: calc(2em + 0.75vw);
+    }
 
     .content .description p {
-        font-size: calc(20px + 0.75vw);
+        font-size: calc(8px + 1.55vw);
 
     }
-    .about-text-block {
-        font-size: calc(20px + 0.75vw);
+
+
+    .footer {
+        justify-content: center;
+
     }
+    .footer .logo .brand-icon {
+        filter: drop-shadow(0 0 16px #ff9500) drop-shadow(0 0 10px #ff7d00); /* Эффект тени под иконкой */
+
+    }
+    .footer .social-icons .soc-icon {
+        fill: var(--color-text-primary);
+    }
+
 }
