@@ -259,6 +259,16 @@ body {
     background-position: center; /* Центрируем изображение */
 
 }
+.about-title-block {
+        width: 55vw;
+        font-size: calc(2em + 1.75vw);
+
+}
+.about-text-block {
+    width: 55vw;
+    font-size:calc(2em + 0.75vw);
+
+}
 
 .about-img[data-img="1"] {
     background-image: url('../../img/about/img_1.webp'); /* URL изображения */
@@ -294,7 +304,7 @@ body {
     width: 100%;
     font-family: 'SofiaSans-SemiBold', sans-serif; /* Применение шрифта */
     line-height: 120%;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.11em;
     font-variant: small-caps;
     font-size:calc(2em + 0.75vw);
     color: var(--color-text-primary);
@@ -408,7 +418,7 @@ body {
     }
     .header .logo {
         flex-direction: column;
-        gap: 4vw;
+        gap: 6vw;
 
     }
     .header .logo .brand-name {
@@ -461,6 +471,7 @@ body {
     }
     .block {
         flex-direction: column;
+        align-items: center;
 
     }
     .about-img {
@@ -472,9 +483,10 @@ body {
         font-size: calc(2em + 1.75vw);
 
     }
-    .about-text-block {
-        width: 55vw;
-        font-size:calc(2em + 0.75vw);
+    .about-text-block p {
+        width: 75vw;
+        font-size:calc(1em + 0.45vw);
+        text-indent: 2em; /* Отступ первой строки на 2 em */
 
     }
 
@@ -524,33 +536,37 @@ body {
     }
     .header .logo {
         flex-direction: column;
+        gap: 4vw;
 
     }
     .header .logo .brand-name {
-        font-size: calc(30px + 3.75vw); /* 320px -> 42px / 480px -> 48px */
+        font-size: calc(5em + 6.15vw);
 
     }
     .header .logo .brand-icon {
-        width: calc(24px + 7.5vw);
-        height: calc(24px + 7.5vw);
+    width: calc(6em + 12.15vw);
+    height: calc(6em + 12.15vw);
+    filter: drop-shadow(0 0 16px #ff9500) drop-shadow(0 0 8px #ff7d00); /* Эффект тени под иконкой */
     }
     .header .hamburger-menu {
-        width: calc(12em + 1.0vw);
-        height: calc(8em + 1.1vw);
+    width: calc(6em + 4.0vw);
+    height: calc(4em + 4.3vw);
+    margin-left: auto;
+    margin-right: calc(2em + 2.1vw);
     }
     .header .hamburger-menu .bar {
-        height: calc(0.5em + 0.6vw); /* Высота полоски */
+        height: calc(1em + 0.3vw);
 
     }
 
-
+/* Стили модалки */
     .modal-menu {
         flex-direction: column; /* Располагаем элементы по горизонтали */
         height: auto; /* Автоматическая высота */
         margin-top: 5vw;
         padding: 6vw;
         top: 0;
-        gap: calc(5em + 3.5vw);
+        gap: calc(8em + 3.5vw);
         background-color: hsl(248, 40%, 15%, 0.95);
         border-radius: var(--border-radius-small);
         transition: visibility 0.5s, opacity 0.5s ease;
@@ -559,32 +575,42 @@ body {
     }
     .menu-nav {
         flex-direction: column;
-
+        gap: calc(5em + 1.2vw);
     }
     .menu-nav a {
         text-align: center;
 
     }
     .lang-switch {
-        width: calc(3em + 0.2vw);
-        height: calc(3em + 0.2vw);
-        font-size: calc(2em + 0.9vw);
+        width: calc(3em + 1.1vw);
+        height: calc(3em + 1.1vw);
+        font-size: calc(2em + 0.75vw);
 
     }
 
 /* Стили контента страницы */
+    .blocks-about {
+        align-items: center;
+
+    }
     .block {
         flex-direction: column;
+        align-items: center;
 
     }
-    .about-img-1, .about-img-2, .about-img-3 {
+    .about-img {
         width: 55vw;
         height: 55vw;
-        border-radius: 10px;
+    }
+    .about-title-block {
+        width: 55vw;
+        font-size: calc(2em + 1.75vw);
 
     }
-    .about-text-block {
-        width: 55vw;
+    .about-text-block p {
+        width: 65vw;
+        font-size:calc(1em + 0.45vw);
+        text-indent: 2em; /* Отступ первой строки на 2 em */
 
     }
 
@@ -606,6 +632,10 @@ body {
     .cont-icon {
         display: none;
 
+    }
+    .footer .social-icons .soc-icon {
+        width: calc(4em + 1.78vw);
+        height: calc(4em + 1.5vw);
     }
 
 }
