@@ -770,67 +770,98 @@ body {
 /* Для экранов шириной 1025px и больше  (Высота экрана: 768px - 1600px и выше)*/
 @media (min-width: 1025px) {
     body{
-        background-image: url('../../img/bg/bg_1920x1080.png'); /* Замените 'your-image-url.jpg' на URL вашего изображения */
+        background-image: url('../../img/bg/bg_1280x720.png'); /* Замените 'your-image-url.jpg' на URL вашего изображения */
 
     }
     .container {
-        backdrop-filter: blur(2em);
-        padding: 18em 11em;
-        border-radius: 60px;
+        padding: 15em 10em;
 
     }
 
 /* Стили для header */
     .header {
-        justify-content: flex-end;
+        align-items: flex-end;
+        justify-content: center;
+        position: relative;
 
     }
     .header .logo {
-        flex-direction: row;
-        gap: 20px
+        gap: 2vw;
 
     }
     .header .logo .brand-name {
-        font-size: calc(20px + 2.75vw);
+        font-size: calc(1em + 3.15vw);
 
     }
     .header .logo .brand-icon {
-        width: calc(16px + 4.5vw);
-        height: calc(16px + 4.5vw);
+    width: calc(2em + 4.15vw);
+    height: calc(2em + 4.15vw);
+    filter: drop-shadow(0 0 16px #ff9500) drop-shadow(0 0 8px #ff7d00); /* Эффект тени под иконкой */
     }
     .header .hamburger-menu {
-        width: calc(12em + 3vw);
-        height: calc(8em + 3vw);
+    width: calc(10em + 3.0vw);
+    height: calc(7em + 3.3vw);
+    margin-left: auto;
+    margin-right: calc(2em + 2.1vw);
     }
     .header .hamburger-menu .bar {
-        height: calc(2em + 0.3vw); /* Высота полоски */
-        border-radius: 1.5em; /* Скругление углов полоски */
+        height: calc(2em + 0.16vw);
+
     }
 
 /* Стили модалки */
     .modal-menu {
-        justify-content: flex-end;
-        right: auto;
-        margin-right: calc(2em + 2.1vw);
-        gap: calc(3em + 1.5vw);
+        height: auto; /* Автоматическая высота */
+        gap: calc(1em + 1.5vw);
+        transition: visibility 0.5s, opacity 0.5s ease;
+        position: absolute;
+        top: 150%; /* Позиционируем модальное меню под заголовком */
     }
-    .menu-nav a {
-        font-size: calc(0.5em + 1.6vw);
+    .modal-menu.open {
+        visibility: visible; /* Показываем модальное меню */
+        opacity: 1; /* Устанавливаем непрозрачность */
 
     }
-    .close-button .bar-1, .close-button .bar-2 {
-        width: calc(4em + 1.0vw);
+    .menu-nav {
+        gap: calc(5em + 0.5vw);
+
+    }
+    .menu-nav a {
+        text-align: center;
+        font-size: calc(3em + 1.2vw);
 
     }
     .lang-switch {
         width: calc(2em + 1.1vw);
         height: calc(2em + 1.1vw);
         font-size: calc(2em + 0.75vw);
+
     }
 
 /* Стили контента страницы */
-    .about-text-block {
-        font-size: calc(20px + 0.75vw);
+    .content {
+        margin-top: 10vw;
+
+    }
+
+    .block {
+        align-items: center;
+
+    }
+    .about-img {
+        width: 30vw;
+        height: 30vw;
+    }
+    .about-title-block {
+        width: 30vw;
+        font-size: calc(2em + 1.73vw);
+
+    }
+    .about-text-block p {
+        width: 35vw;
+        font-size:calc(1em + 0.6vw);
+        text-indent: 2em; /* Отступ первой строки на 2 em */
+        line-height: 135%;
 
     }
 
@@ -839,13 +870,22 @@ body {
         justify-content: center;
 
     }
-    .footer .logo .brand-icon {
-        filter: drop-shadow(0 0 16px #ff9500) drop-shadow(0 0 10px #ff7d00); /* Эффект тени под иконкой */
+
+    .footer .logo .brand-name {
+        font-size: calc(2em + 2.15vw);
+
+    }
+    .footer p {
+        font-size:calc(2em + 0.55vw);
+
+    }
+    .cont-icon {
+        display: none;
 
     }
     .footer .social-icons .soc-icon {
-        fill: var(--color-text-primary);
-
+        width: calc(4em + 1.78vw);
+        height: calc(4em + 1.5vw);
     }
 
 }
