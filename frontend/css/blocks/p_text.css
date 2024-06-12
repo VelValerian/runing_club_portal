@@ -48,6 +48,9 @@
     --color-text-secondary: #EDEAE8;
     --color-text-orange: #FF9447;
     --color-text-gradient: linear-gradient(137deg, #ff9447 0%, #ff510b 100%);
+    --color-button-gradient: linear-gradient(137deg, #ff9447 0%, #ff510b 100%);
+    --color-button-hover: linear-gradient(137deg, #ff510b 0%, #ff9447 100%);
+    --color-button-click: linear-gradient(137deg, #35DA8B 0%, #057B42 100%);
 
     --box-shadow-large: 12px 8px 15px 0 rgba(0, 0, 0, 0.5), inset 14px 14px 20px 0 rgba(255, 255, 255, 0.25), inset -14px -14px 10px 0 rgba(0, 0, 0, 0.6);
     --box-shadow-small: 6px 4px 8px 0 rgba(0, 0, 0, 0.5), inset 4px 4px 6px 0 rgba(255, 255, 255, 0.25), inset -7px -7px 5px 0 rgba(0, 0, 0, 0.6);
@@ -81,6 +84,7 @@ body {
     display: flex; /* Используем flexbox для расположения элементов */
     align-items: flex-end;
     justify-content: center;
+    padding-left: 3vw;
 }
 .header .logo{
     display: flex; /* Используем flexbox для расположения элементов */
@@ -213,6 +217,45 @@ body {
 
 }
 
+/* Стили кнопки */
+.button {
+    display: inline-block;
+    padding: 1em 3em;
+    margin: 2vw;
+    font-family: 'SofiaSans-Black', sans-serif; /* Применение шрифта */
+    line-height: 120%;
+    letter-spacing: 0.11em;
+    font-variant: small-caps;
+    font-size:calc(2em + 0.75vw);
+    color: var(--color-text-primary);
+    background: var(--color-button-gradient);
+    box-shadow: 6px 6px 12px 0 rgba(0, 0, 0, 0.45), inset 8px 4px 12px 0 rgba(255, 255, 255, 0.35), inset -8px -4px 12px 0 rgba(0, 0, 0, 0.75);
+
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+/* Стили при наведении */
+.button:hover {
+    background: var(--color-button-hover);
+
+}
+/* Стили при фокусировке */
+.button:focus {
+    outline: none;
+    box-shadow: 6px 6px 12px 0 rgba(0, 0, 0, 0.45), inset 8px 4px 12px 0 rgba(255, 255, 255, 0.35), inset -8px -4px 12px 0 rgba(0, 0, 0, 0.75);
+
+}
+/* Стили при нажатии */
+.button:active {
+    transition: background-color 0.1s ease;
+    background: var(--color-button-click);
+    box-shadow: 6px 6px 12px 0 rgba(0, 0, 0, 0.45), inset 8px 4px 12px 0 rgba(255, 255, 255, 0.35), inset -8px -4px 12px 0 rgba(0, 0, 0, 0.75);
+
+}
+
 /* Контент  страницы */
 .content {
     display: flex; /* Используем flexbox для расположения элементов */
@@ -231,67 +274,38 @@ body {
     font-size: calc(7em + 5.75vw);
     color: var(--color-text-primary);
     margin-top: 5vw;
+    text-align: center;
 
 }
-
 
 /* Контент  `Про меня` страница */
-.blocks-about {
-    display: flex;
-    flex-direction: column;
-}
-.block {
+.blocks-page {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin-top: 10vw;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 5vw;
 }
-.about-img {
+.page-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10vw;
+    gap: 2vw;
+}
+.page-img {
     width: 30vw;
     height: 30vw;
     border-radius: 10%;
     box-shadow: 0 -3px 10px 0 rgba(255, 255, 255, 0.05), 0 0 10px 0 rgba(255, 255, 255, 0.1), inset 0 2px 5px 0 rgba(0, 0, 0, 0.5), inset 0 -2px 5px 0 rgba(255, 255, 255, 0.1);
     background: rgba(0, 0, 0, 0.15);
+    background-image: url('../../img/exercise/img_1.webp'); /* URL изображения */
     background-size: cover; /* Изображение полностью покрывает элемент */
     background-repeat: no-repeat; /* Изображение не повторяется */
     background-position: center; /* Центрируем изображение */
 
 }
-
-.about-img[data-img="1"] {
-    background-image: url('../../img/about/img_1.webp'); /* URL изображения */
-
-}
-.about-img[data-img="2"] {
-    background-image: url('../../img/about/img_2.webp'); /* URL изображения */
-
-}
-.about-img[data-img="3"] {
-    background-image: url('../../img/about/img_3.webp'); /* URL изображения */
-
-}
-
-
-.about-txt {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2vw;
-}
-.about-title-block {
-    font-family: 'SofiaSans-ExtraBold', sans-serif; /* Применение шрифта */
-    line-height: 115%;
-    letter-spacing: 0.12em;
-    font-variant: small-caps;
-    width: 55vw;
-    font-size: calc(3em + 1.75vw);
-    color: var(--color-text-orange);
-    text-align: left;
-
-}
-.about-text-block {
-    width: 100%;
+.page-text {
     font-family: 'SofiaSans-SemiBold', sans-serif; /* Применение шрифта */
     line-height: 120%;
     letter-spacing: 0.11em;
@@ -299,8 +313,17 @@ body {
     font-size:calc(2em + 0.75vw);
     color: var(--color-text-primary);
     text-align: left;
+    text-indent: 2em;
+    width: 65vw;
+    height: auto;
 
+    /*Подложка под текст */
+    padding: 3vw;
+    border-radius: 2vw;
+    box-shadow: 0 -3px 10px 0 rgba(255, 255, 255, 0.05), 0 0 10px 0 rgba(255, 255, 255, 0.1), inset 0 2px 5px 0 rgba(0, 0, 0, 0.5), inset 0 -2px 5px 0 rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.65);
 }
+
 
 
 /* Стили для подвала */
@@ -456,31 +479,64 @@ body {
 
     }
 
+
+/* Стили кнопки */
+    .button {
+    margin: 4vw;
+    border-radius: 2vw;
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.45), inset 4px 2px 8px 0 rgba(255, 255, 255, 0.35), inset -4px -2px 6px 0 rgba(0, 0, 0, 0.55);
+    }
+    .button:active {
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.45), inset 4px 2px 8px 0 rgba(255, 255, 255, 0.35), inset -4px -2px 6px 0 rgba(0, 0, 0, 0.55);
+
+    }
+    .button:focus {
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.45), inset 4px 2px 8px 0 rgba(255, 255, 255, 0.35), inset -4px -2px 6px 0 rgba(0, 0, 0, 0.55);
+
+    }
+
+/* Контент  страницы */
+.content {
+    display: flex; /* Используем flexbox для расположения элементов */
+    flex-direction: column; /* Располагаем полоски по вертикали */
+    align-items: center;
+    margin-top: 5vw;
+    width: 100%;
+
+}
+
+.page-title {
+    font-size: calc(3em + 5.75vw);
+
+
+}
+
 /* Стили контента страницы */
-    .blocks-about {
+    .page-block {
         align-items: center;
+        margin-top: 14vw;
+        gap: 4vw;
 
     }
-    .block {
-        flex-direction: column;
-        align-items: center;
-
-    }
-    .about-img {
+    .page-img {
         width: 55vw;
         height: 55vw;
     }
-    .about-title-block {
-        width: 55vw;
-        font-size: calc(2em + 1.75vw);
+    .page-text {
+        font-size: calc(3em + 0.1vw);
+        letter-spacing: 0.05em;
+        text-indent: 1em;
+        text-align: left;
+        width: 70vw;
 
+        /* Включение автоматического переноса слов */
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        word-break: break-word;
     }
-    .about-text-block p {
-        width: 75vw;
-        font-size:calc(1em + 0.45vw);
-        text-indent: 2em; /* Отступ первой строки на 2 em */
 
-    }
+
 
 /* Стили подвала */
     .footer {
@@ -581,30 +637,53 @@ body {
 
     }
 
+
+/* Стили кнопки */
+    .button {
+    margin: 4vw;
+    border-radius: 2vw;
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.45), inset 4px 2px 8px 0 rgba(255, 255, 255, 0.35), inset -4px -2px 6px 0 rgba(0, 0, 0, 0.55);
+    }
+    .button:active {
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.45), inset 4px 2px 8px 0 rgba(255, 255, 255, 0.35), inset -4px -2px 6px 0 rgba(0, 0, 0, 0.55);
+
+    }
+    .button:focus {
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.45), inset 4px 2px 8px 0 rgba(255, 255, 255, 0.35), inset -4px -2px 6px 0 rgba(0, 0, 0, 0.55);
+
+    }
+
 /* Стили контента страницы */
-    .blocks-about {
+    .blocks-page {
         align-items: center;
 
     }
-    .block {
+    .page-block {
         flex-direction: column;
         align-items: center;
 
     }
-    .about-img {
+    .page-img {
         width: 55vw;
         height: 55vw;
     }
-    .about-title-block {
+    .page-title {
         width: 55vw;
-        font-size: calc(2em + 1.75vw);
+        font-size: calc(8em + 1.75vw);
 
     }
-    .about-text-block p {
-        width: 65vw;
-        font-size:calc(1em + 0.45vw);
-        text-indent: 2em; /* Отступ первой строки на 2 em */
+    .page-text {
+        font-size: calc(4em + 0.1vw);
+        letter-spacing: 0.05em;
+        text-indent: 1em;
+        text-align: left;
+        width: 70vw;
 
+        /* Включение автоматического переноса слов */
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        word-break: break-word;
     }
 
 /* Стили подвала */
@@ -690,6 +769,7 @@ body {
     }
     .menu-nav {
         gap: calc(5em + 0.5vw);
+
     }
     .menu-nav a {
         text-align: center;
@@ -703,35 +783,52 @@ body {
 
     }
 
+
+/* Стили кнопки */
+    .button {
+    margin: 4vw;
+    border-radius: 1vw;
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.45), inset 4px 2px 8px 0 rgba(255, 255, 255, 0.35), inset -4px -2px 6px 0 rgba(0, 0, 0, 0.55);
+    }
+    .button:active {
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.45), inset 4px 2px 8px 0 rgba(255, 255, 255, 0.35), inset -4px -2px 6px 0 rgba(0, 0, 0, 0.55);
+
+    }
+    .button:focus {
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.45), inset 4px 2px 8px 0 rgba(255, 255, 255, 0.35), inset -4px -2px 6px 0 rgba(0, 0, 0, 0.55);
+
+    }
+
 /* Стили контента страницы */
     .content {
         margin-top: 10vw;
 
     }
-    .blocks-about {
+    .blocks-page {
         align-items: center;
 
     }
-    .block {
+    .page-block {
         flex-direction: column;
         align-items: center;
 
     }
-    .about-img {
+    .page-img {
         width: 45vw;
         height: 45vw;
     }
-    .about-title-block {
-        width: 55vw;
-        font-size: calc(2em + 1.75vw);
-
-    }
-    .about-text-block p {
+    .page-text {
+        font-size: calc(6em + 0.1vw);
+        letter-spacing: 0.05em;
+        text-indent: 1em;
+        text-align: left;
         width: 70vw;
-        font-size:calc(1em + 1.1vw);
-        text-indent: 2em; /* Отступ первой строки на 2 em */
-        line-height: 135%;
 
+        /* Включение автоматического переноса слов */
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        word-break: break-word;
     }
 
 /* Стили подвала */
@@ -774,6 +871,7 @@ body {
     .header {
         align-items: flex-end;
         justify-content: center;
+
         position: relative;
 
     }
@@ -836,25 +934,28 @@ body {
 
     }
 
-    .block {
+    .blocks-page {
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 5vw;
+
+    }
+    .page-block {
         align-items: center;
 
     }
-    .about-img {
-        width: 30vw;
-        height: 30vw;
+    .page-img {
+        width: 45vw;
+        height: 45vw;
     }
-    .about-title-block {
-        width: 30vw;
-        font-size: calc(2em + 1.73vw);
+    .page-text {
+        font-size: calc(1em + 1.7vw);
 
-    }
-    .about-text-block p {
-        width: 35vw;
-        font-size:calc(1em + 0.6vw);
-        text-indent: 2em; /* Отступ первой строки на 2 em */
-        line-height: 135%;
-
+        /* Включение автоматического переноса слов */
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        word-break: break-word;
     }
 
 /* Стили подвала */

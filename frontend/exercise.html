@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>No Mondays</title>
+    <title>No Mondays - Занятия</title>
     <!--style-->
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/base.css">
-    <!--blocks-->
-    <link rel="stylesheet" href="./css/blocks/header.css">
-    <link rel="stylesheet" href="./css/blocks/footer.css">
+    <link rel="stylesheet" href="./css/blocks/p_exercise.css">
 </head>
 <body>
 
@@ -25,8 +22,8 @@
                 <nav class="menu-nav">
                     <a href="./index.html">главная</a>
                     <a href="./about.html">кто я</a>
-                    <a href="#">блог</a>
-                    <a href="#">занятия</a>
+                    <a href="./blog.html">блог</a>
+                    <a href="./exercise.html">занятия</a>
                     <a href="#">контакты</a>
                 </nav>
                 <button class="lang-switch">EN</button>
@@ -43,59 +40,39 @@
         </header>
         <div class="content" id="content">
             <h1 class="page-title">
-                КТО Я
+                ЗАНЯТИЯ
             </h1>
-            <div class="blocks-exers">
-                <div class="block">
-                    <div class="exers-img-bg">
-                        <picture>
-                          <source srcset="image-300.webp 300w, image-600.webp 600w, image-1200.webp 1200w" type="image/webp">
-                          <source srcset="image-300.jpg 300w, image-600.jpg 600w, image-1200.jpg 1200w" type="image/jpeg">
-                          <img src="image-300.jpg" alt="Описание изображения" style="width: 100%;">
-                        </picture>
-                    </div>
-                    <div class="exers-txt">
-                        <p class="text-block">
-                            Я Андрей Кузнецов.  Однажды, студентом,
-                            я пришёл в бег и остался в нём навсегда. Это больше, чем спорт.
-                            Бег — это скорость, сила, медитация, молодость, здоровье, работа, любимое дело.
-                        </p>
-                    </div>
+            <div class="blocks-exercise">
+               <a href="./pers-training.html">
+                   <div class="exercise-block">
+                    <div class="exercise-img" data-img="1"></div>
+                    <p class="exercise-title">Индивидуальные тренировки</p>
                 </div>
-                <div class="block">
-                    <div class="exers-img-bg">
-                        <picture>
-                          <source srcset="image-300.webp 300w, image-600.webp 600w, image-1200.webp 1200w" type="image/webp">
-                          <source srcset="image-300.jpg 300w, image-600.jpg 600w, image-1200.jpg 1200w" type="image/jpeg">
-                          <img src="image-300.jpg" alt="Описание изображения" style="width: 100%;">
-                        </picture>
+               </a>
+               <a href="#">
+                   <div class="exercise-block">
+                        <div class="exercise-img" data-img="2"></div>
+                        <p class="exercise-title">Программа питания</p>
                     </div>
-                    <div class="exers-txt">
-                        <p class="text-block">
-                            Личный соревновательный опыт — 24 года;<br>
-                            Опыт тренерской деятельности — 9 лет;<br>
-                            Сооснователь спортивной школы.
-                        </p>
+               </a>
+               <a href="#">
+                   <div class="exercise-block">
+                        <div class="exercise-img" data-img="3"></div>
+                        <p class="exercise-title">Групповые тренировки</p>
                     </div>
+               </a>
+               <a href="#">
+                    <div class="exercise-block">
+                        <div class="exercise-img" data-img="4"></div>
+                        <p class="exercise-title">Видео уроки</p>
+                    </div>
+               </a>
+               <a href="#">
+                   <div class="exercise-block">
+                    <div class="exercise-img" data-img="5"></div>
+                    <p class="exercise-title">Программа тренировок</p>
                 </div>
-                <div class="block">
-                    <div class="exers-img-bg">
-                        <picture>
-                          <source srcset="image-300.webp 300w, image-600.webp 600w, image-1200.webp 1200w" type="image/webp">
-                          <source srcset="image-300.jpg 300w, image-600.jpg 600w, image-1200.jpg 1200w" type="image/jpeg">
-                          <img src="image-300.jpg" alt="Описание изображения" style="width: 100%;">
-                        </picture>
-                    </div>
-                    <div class="exers-txt">
-                        <p class="text-block">
-                            Финишёр более 10 беговых международных марафонов,
-                            в том числе в Берлине, Амстердаме, Риге<br>
-                            Участник Кубка Мира ITU по триатлону в AG 2014 <br>
-                            Финишёр 3х лыжных марафонов<br>
-                            Финишёр Ультра Трейла Golden Ring 109 км.
-                        </p>
-                    </div>
-                </div>
+               </a>
             </div>
         </div>
         <footer class="footer" id="footer">

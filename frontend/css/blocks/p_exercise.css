@@ -81,6 +81,7 @@ body {
     display: flex; /* Используем flexbox для расположения элементов */
     align-items: flex-end;
     justify-content: center;
+    padding-left: 3vw;
 }
 .header .logo{
     display: flex; /* Используем flexbox для расположения элементов */
@@ -236,18 +237,21 @@ body {
 
 
 /* Контент  `Про меня` страница */
-.blocks-about {
-    display: flex;
-    flex-direction: column;
-}
-.block {
+.blocks-exercise {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin-top: 10vw;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 5vw;
 }
-.about-img {
+.exercise-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10vw;
+    gap: 2vw;
+}
+.exercise-img {
     width: 30vw;
     height: 30vw;
     border-radius: 10%;
@@ -258,47 +262,35 @@ body {
     background-position: center; /* Центрируем изображение */
 
 }
-
-.about-img[data-img="1"] {
-    background-image: url('../../img/about/img_1.webp'); /* URL изображения */
-
-}
-.about-img[data-img="2"] {
-    background-image: url('../../img/about/img_2.webp'); /* URL изображения */
-
-}
-.about-img[data-img="3"] {
-    background-image: url('../../img/about/img_3.webp'); /* URL изображения */
-
-}
-
-
-.about-txt {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2vw;
-}
-.about-title-block {
+.exercise-title {
     font-family: 'SofiaSans-ExtraBold', sans-serif; /* Применение шрифта */
     line-height: 115%;
     letter-spacing: 0.12em;
     font-variant: small-caps;
-    width: 55vw;
-    font-size: calc(3em + 1.75vw);
+    font-size: calc(4em + 1.75vw);
     color: var(--color-text-orange);
-    text-align: left;
+    text-align: center;
 
 }
-.about-text-block {
-    width: 100%;
-    font-family: 'SofiaSans-SemiBold', sans-serif; /* Применение шрифта */
-    line-height: 120%;
-    letter-spacing: 0.11em;
-    font-variant: small-caps;
-    font-size:calc(2em + 0.75vw);
-    color: var(--color-text-primary);
-    text-align: left;
+
+.exercise-img[data-img="1"] {
+    background-image: url('../../img/exercise/img_1.webp'); /* URL изображения */
+
+}
+.exercise-img[data-img="2"] {
+    background-image: url('../../img/exercise/img_2.webp'); /* URL изображения */
+
+}
+.exercise-img[data-img="3"] {
+    background-image: url('../../img/exercise/img_3.webp'); /* URL изображения */
+
+}
+.exercise-img[data-img="4"] {
+    background-image: url('../../img/exercise/img_4.webp'); /* URL изображения */
+
+}
+.exercise-img[data-img="5"] {
+    background-image: url('../../img/exercise/img_5.webp'); /* URL изображения */
 
 }
 
@@ -457,28 +449,21 @@ body {
     }
 
 /* Стили контента страницы */
-    .blocks-about {
+    .blocks-exercise {
         align-items: center;
 
     }
-    .block {
+    .exercise-block {
         flex-direction: column;
         align-items: center;
 
     }
-    .about-img {
+    .exercise-img {
         width: 55vw;
         height: 55vw;
     }
-    .about-title-block {
-        width: 55vw;
-        font-size: calc(2em + 1.75vw);
-
-    }
-    .about-text-block p {
-        width: 75vw;
-        font-size:calc(1em + 0.45vw);
-        text-indent: 2em; /* Отступ первой строки на 2 em */
+    .exercise-title {
+        font-size: calc(4em + 1.75vw);
 
     }
 
@@ -582,28 +567,22 @@ body {
     }
 
 /* Стили контента страницы */
-    .blocks-about {
+    .blocks-exercise {
         align-items: center;
 
     }
-    .block {
+    .exercise-block {
         flex-direction: column;
         align-items: center;
 
     }
-    .about-img {
+    .exercise-img {
         width: 55vw;
         height: 55vw;
     }
-    .about-title-block {
+    .exercise-title {
         width: 55vw;
-        font-size: calc(2em + 1.75vw);
-
-    }
-    .about-text-block p {
-        width: 65vw;
-        font-size:calc(1em + 0.45vw);
-        text-indent: 2em; /* Отступ первой строки на 2 em */
+        font-size: calc(8em + 1.75vw);
 
     }
 
@@ -708,29 +687,22 @@ body {
         margin-top: 10vw;
 
     }
-    .blocks-about {
+    .blocks-exercise {
         align-items: center;
 
     }
-    .block {
+    .exercise-block {
         flex-direction: column;
         align-items: center;
 
     }
-    .about-img {
+    .exercise-img {
         width: 45vw;
         height: 45vw;
     }
-    .about-title-block {
+    .exercise-title {
         width: 55vw;
-        font-size: calc(2em + 1.75vw);
-
-    }
-    .about-text-block p {
-        width: 70vw;
-        font-size:calc(1em + 1.1vw);
-        text-indent: 2em; /* Отступ первой строки на 2 em */
-        line-height: 135%;
+        font-size: calc(8em + 1.75vw);
 
     }
 
@@ -774,6 +746,7 @@ body {
     .header {
         align-items: flex-end;
         justify-content: center;
+
         position: relative;
 
     }
@@ -836,24 +809,24 @@ body {
 
     }
 
-    .block {
+    .blocks-exercise {
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 5vw;
+
+    }
+    .exercise-block {
         align-items: center;
 
     }
-    .about-img {
-        width: 30vw;
-        height: 30vw;
+    .exercise-img {
+        width: 25vw;
+        height: 25vw;
     }
-    .about-title-block {
+    .exercise-title {
         width: 30vw;
-        font-size: calc(2em + 1.73vw);
-
-    }
-    .about-text-block p {
-        width: 35vw;
-        font-size:calc(1em + 0.6vw);
-        text-indent: 2em; /* Отступ первой строки на 2 em */
-        line-height: 135%;
+        height: 5vw;
+        font-size: calc(3em + 2.1vw);
 
     }
 
