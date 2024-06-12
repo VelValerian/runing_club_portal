@@ -50,10 +50,13 @@
     --color-text-gradient: linear-gradient(137deg, #ff9447 0%, #ff510b 100%);
 
     --box-shadow-outer-large: 1.5vw 0.5vw 1vw 0 rgba(0, 0, 0, 0.5), inset 1vw 1vw 2vw 0 rgba(255, 255, 255, 0.25), inset -1vw -1vw 3vw 0 rgba(0, 0, 0, 0.6);
-    --box-shadow-outer-small: 6px 4px 8px 0 rgba(0, 0, 0, 0.5), inset 4px 4px 6px 0 rgba(255, 255, 255, 0.25), inset -7px -7px 5px 0 rgba(0, 0, 0, 0.6);
+        --box-shadow-outer-small: 6px 4px 8px 0 rgba(0, 0, 0, 0.5), inset 4px 4px 6px 0 rgba(255, 255, 255, 0.25), inset -7px -7px 5px 0 rgba(0, 0, 0, 0.6);
+    --box-shadow-outer-mobile: 0vw 0vw 3vw 0 rgba(0, 0, 0, 0.6), inset 4vw 4vw 4vw 0 rgba(255, 255, 255, 0.25), inset -4vw -4vw 2vw 0 rgba(0, 0, 0, 0.4);
 
     --box-shadow-inner-small: 0 -0.2vw 0.7vw 0 rgba(255, 255, 255, 0.1), 0 0 0.4vw 0 rgba(255, 255, 255, 0.05), inset 0 -0.6vw 0.5vw 0 rgba(0, 0, 0, 0.1), inset 0.6vw 0 0.5vw 0 rgba(0, 0, 0, 0.4);
+    --box-shadow-inner-mobile: 0.5vw -0.2vw 0.5vw 0 rgba(255, 255, 255, 0.1),inset -0.5vw -1vw 2vw 0 rgba(255, 255, 255, 0.15), inset 0 1vw 0.5vw 0.8vw rgba(0, 0, 0, 0.1), inset 2vw 0 0.6vw 0 rgba(0, 0, 0, 0.2);
 
+    --backdrop-filter-blur-mobile: 0.9vw;
     --backdrop-filter-blur-large: 0.4vw;
 
     --border-radius-large: 5vw;
@@ -120,33 +123,8 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.header .hamburger-menu {
-    display: flex; /* Используем flexbox для расположения полосок */
-    flex-direction: column; /* Располагаем полоски по вертикали */
-    justify-content: space-between; /* Распределяем полоски равномерно с пробелами между ними */
-    align-items: center; /* Выравниваем полоски по горизонтали по центру */
-    cursor: pointer; /* Курсор меняется на указатель при наведении */
-    width: calc(6em + 1.0vw);
-    height: calc(4em + 1.1vw);
-    margin-left: auto;
-    margin-right: calc(2em + 2.1vw);
-    transition: visibility 0s, opacity 0.5s ease;
-    visibility: hidden; /* Скрываем модальное меню по умолчанию */
-    opacity: 0; /* Прозрачность по умолчанию */
-    position: absolute;
-}
-.header .hamburger-menu .bar {
-    width: 100%; /* Ширина полоски */
-    height: 1em; /* Высота полоски */
-    background: var(--color-text-gradient); /* Цвет полоски */
-    border-radius: 3px; /* Скругление углов полоски */
-}
-.logo.hidden {
-    display: none; /* Скрываем hamburger-menu */
-
-}
-.hamburger-menu.hidden {
-    display: none; /* Скрываем hamburger-menu */
+.hamburger-menu {
+    display: none;
 
 }
 
@@ -190,38 +168,12 @@ body {
     cursor: pointer;
 
     border-radius: 0.75vw;
-    background: var(--color-text-gradient); /* Цвет полоски */
+    border-style: none;
+    background: var(--color-text-orange);
 
     width: calc(1.5em + 0.9vw);
     height: calc(1.5em + 0.9vw);
-    font-size: calc(1em + 0.25vw);
-}
-
-.close-button {
-  position: relative; /* Используем относительное позиционирование */
-  width: 9em; /* Ширина всего меню */
-  height: 9em; /* Высота всего меню */
-  cursor: pointer; /* Курсор меняется на указатель при наведении */
-  display: none;
-
-}
-.close-button .bar-1, .close-button .bar-2 {
-  position: absolute; /* Абсолютное позиционирование полосок */
-  top: 50%; /* Центрируем полоски по вертикали */
-  left: 50%; /* Центрируем полоски по горизонтали */
-  width: calc(5em + 1.0vw);
-  height: 1em; /* Высота полосок (их длина) */
-  background: var(--color-text-primary); /* Цвет полосок */
-  border-radius: 3px; /* Скругление углов полосок */
-  transform-origin: center; /* Центрируем точку вращения */
-}
-.close-button .bar-1 {
-  transform: translate(-50%, -50%) rotate(45deg); /* Поворачиваем полоску на 45 градусов и центрируем */
-
-}
-.close-button .bar-2 {
-  transform: translate(-50%, -50%) rotate(-45deg); /* Поворачиваем полоску на -45 градусов и центрируем */
-
+    font-size: calc(1.5em + 0.35vw);
 }
 
 /* Контент  страницы */
@@ -269,7 +221,7 @@ body {
     width: 12vw;
     height: 12vw;
     border-radius: 1vw;
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.65);
     background-size: cover; /* Изображение полностью покрывает элемент */
     background-repeat: no-repeat; /* Изображение не повторяется */
     background-position: center; /* Центрируем изображение */
@@ -372,6 +324,14 @@ body {
     height: calc(1em + 0.78vw);
 }
 
+/* Разделительная полоса */
+.spread-line {
+    width: 100%;
+    height:0.3vw;
+    border-radius: 1vw;
+    box-shadow: var(--box-shadow-inner-small);
+}
+
 /* Стили для подвала */
 .footer {
     display: flex; /* Используем flexbox для расположения элементов */
@@ -379,14 +339,8 @@ body {
     align-items: center; /* Выравниваем элементы по вертикали по центру */
     justify-content: center;
     width: 100%;
-    margin-top: 5vw;
+    margin: 5vw 0;
     gap: 5vw;
-}
-.spread-line {
-    width: 100%;
-    height:0.3vw;
-    border-radius: 1vw;
-    box-shadow: var(--box-shadow-inner-small);
 }
 
 .footer .logo {
@@ -415,6 +369,16 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+.footer p {
+    font-family: 'SofiaSans-SemiBold', sans-serif; /* Применение шрифта */
+    line-height: 117%;
+    letter-spacing: 0.12em;
+    font-variant: small-caps;
+    font-size:calc(1em + 0.55vw);
+    color: var(--color-text-primary);
+
+}
+
 .cont-info {
     display: flex; /* Используем flexbox для расположения элементов */
     flex-direction: column; /* Располагаем полоски по вертикали */
@@ -429,50 +393,42 @@ body {
     align-items: center; /* Выравниваем элементы по вертикали по центру */
     gap: 0.2vw;
 }
-
 .cont-icon {
     display: none;
-}
-
-.footer p {
-    font-family: 'SofiaSans-SemiBold', sans-serif; /* Применение шрифта */
-    line-height: 117%;
-    letter-spacing: 0.12em;
-    font-variant: small-caps;
-    font-size:calc(2em + 0.55vw);
-    color: var(--color-text-primary);
 
 }
-
-.footer .social-icons {
+.social-icons {
     display: flex; /* Используем flexbox для расположения элементов */
     flex-direction: row; /* Располагаем полоски по вертикали */
     justify-content: space-between; /* Размещаем элементы по краям */
     align-items: center; /* Выравниваем элементы по вертикали по центру */
 }
-.footer .social-icons .soc-icon {
+.soc-icon {
     fill: var(--color-text-primary);
     width: calc(3em + 1.6vw);
     height: calc(3em + 1.9vw);
     }
 
 /* Для экранов шириной 320px - 480px  (Высота экрана: 480px - 800px)*/
-@media (max-width: 480px) {
+@media (max-width: 640px) {
     body {
         background-image: url('../../img/bg/bg_360x800.png'); /* Замените 'your-image-url.jpg' на URL вашего изображения */
+        overflow: auto;
+
 
     }
     .container {
-        margin-left: 5vw;
-        margin-right: 5vw;
-        margin-top: 3vw;
-        padding: 6em 3em;
+        margin: 0;
+        padding: 4vw 5vw;
+        backdrop-filter: blur(var(--backdrop-filter-blur-mobile));
+        box-shadow:  var(--box-shadow-outer-mobile);
     }
 
     /* Стили для header */
     .header {
         flex-direction: column-reverse;
         align-items: center;
+        box-shadow: none;
 
     }
     .header .logo {
@@ -480,216 +436,231 @@ body {
         gap: 2vw;
 
     }
-    .header .logo .brand-name {
-        font-size: calc(2em + 6.15vw);
-
-    }
     .header .logo .brand-icon {
-    width: calc(2em + 10.15vw);
-    height: calc(2em + 10.15vw);
+    width: calc(2em + 12.15vw);
+    height: calc(2em + 12.15vw);
     filter: drop-shadow(0 0 16px #ff9500) drop-shadow(0 0 8px #ff7d00); /* Эффект тени под иконкой */
     }
-    .header .hamburger-menu .bar {
-        height: calc(0.6em + 0.1vw);
-
-    }
-
-/* Стили модалки */
-    .modal-menu {
-        flex-direction: column; /* Располагаем элементы по горизонтали */
-        height: auto; /* Автоматическая высота */
-        margin-top: 5vw;
-        padding: 6vw;
-        top: 0;
-        width: 60vw;
-        gap: calc(5em + 3.5vw);
-        background-color: hsl(248, 40%, 15%, 0.95);
-        border-radius: var(--border-radius-small);
-        transition: visibility 0.5s, opacity 0.5s ease;
-        position: fixed;
-        z-index: 1000;
-    }
-    .menu-nav {
-        flex-direction: column;
-        gap: calc(8em + 1.2vw);
-    }
-    .menu-nav a {
-        text-align: center;
-
-    }
-    .lang-switch {
-        width: calc(3em + 1.1vw);
-        height: calc(3em + 1.1vw);
-        font-size: calc(2em + 0.75vw);
-
-    }
-
-/* Стили контента страницы */
-    .blocks-exercise {
-        align-items: center;
-
-    }
-    .exercise-block {
-        flex-direction: column;
-        align-items: center;
-
-    }
-    .exercise-img {
-        width: 55vw;
-        height: 55vw;
-    }
-    .exercise-title {
-        font-size: calc(4em + 1.75vw);
-
-    }
-
-/* Стили подвала */
-    .footer {
-        flex-direction: column;
-        gap: 3vw;
-
-    }
-
-    .footer .logo .brand-name {
-        font-size: calc(2em + 2.15vw);
-
-    }
-    .footer p {
-        font-size:calc(2em + 0.55vw);
-
-    }
-    .cont-icon {
-        display: none;
-
-    }
-    .footer .social-icons .soc-icon {
-        width: calc(4em + 1.78vw);
-        height: calc(4em + 1.5vw);
-    }
-
-
-}
-
-/* Для экранов шириной 481px - 768px (Высота экрана: 800px - 1280px)*/
-@media (min-width: 481px) and (max-width: 768px) {
-    body{
-        background-image: url('../../img/bg/bg_1280x720.png'); /* Замените 'your-image-url.jpg' на URL вашего изображения */
-
-    }
-    .container {
-        padding: 11em 7em;
-
-    }
-
-/* Стили для header */
-    .header {
-        flex-direction: column-reverse;
-        align-items: center;
-
-    }
-    .header .logo {
-        flex-direction: column;
-        gap: 4vw;
-
-    }
     .header .logo .brand-name {
-        font-size: calc(5em + 6.15vw);
+        font-size: calc(4em + 6.15vw);
 
     }
-    .header .logo .brand-icon {
-    width: calc(6em + 12.15vw);
-    height: calc(6em + 12.15vw);
-    filter: drop-shadow(0 0 16px #ff9500) drop-shadow(0 0 8px #ff7d00); /* Эффект тени под иконкой */
-    }
+
     .header .hamburger-menu {
-    width: calc(6em + 4.0vw);
-    height: calc(4em + 4.3vw);
-    margin-left: auto;
-    margin-right: calc(2em + 2.1vw);
+        display: block;
+        margin-left: auto;
+        margin-right: calc(1em + 1.1vw);
+        transition: visibility 0s, opacity 0.5s ease;
     }
-    .header .hamburger-menu .bar {
-        height: calc(1em + 0.3vw);
+    .hamburger-icon {
+        width: calc(5em + 5.7vw);
+        height: calc(5em + 5.7vw);
+        fill:  var(--color-text-orange); /* Цвет полоски */
+        }
+    .hamburger-menu.hidden {
+        display: none; /* Скрываем hamburger-menu */
 
     }
 
-/* Стили модалки */
+    /*Модальное меню */
     .modal-menu {
+        display: flex; /* Используем flexbox для расположения элементов */
         flex-direction: column; /* Располагаем элементы по горизонтали */
-        height: auto; /* Автоматическая высота */
-        margin-top: 5vw;
-        padding: 6vw;
-        top: 0;
-        width: 60vw;
-        gap: calc(8em + 3.5vw);
-        background-color: hsl(248, 40%, 15%, 0.95);
-        border-radius: var(--border-radius-small);
-        transition: visibility 0.5s, opacity 0.5s ease;
         position: fixed;
+        transition: visibility 0s, opacity 0.5s ease;
+
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        padding-top: 15vh;
+        background-image: url('../../img/bg/bg_360x800.png');
+        background-color: var(--color-bg); /* Задаем цвет фона */
+        background-size: cover; /* Устанавливает размер изображения на покрытие всего экрана */
+        background-repeat: no-repeat; /* Изображение не повторяется */
+        background-position: center center; /* Центрирует изображение */
+        background-attachment: fixed; /* Фиксирует изображение относительно видимой области экрана */
+        overflow: auto; /* Включаем прокрутку внутри модального окна */
+
         z-index: 1000;
+        visibility: hidden; /* Скрываем модальное меню по умолчанию */
+        opacity: 0; /* Прозрачность по умолчанию */
+    }
+    .modal-menu.open {
+        visibility: visible; /* Показываем модальное меню */
+        opacity: 1; /* Устанавливаем непрозрачность */
+        }
+    .modal-content {
+        display: flex; /* Используем flexbox для расположения элементов */
+        flex-direction: column; /* Располагаем элементы по горизонтали */
+        align-items: center; /* Выравниваем элементы по вертикали по центру */
+        position: relative;
+        box-shadow:  var(--box-shadow-inner-mobile);
+        background-color: rgba(0, 0, 0, 0.4);
+        width: 60vw;
+        padding: 5vw;
+        border-radius: 2vw;
+        gap: calc(2em + 1.2vw);
     }
     .menu-nav {
+        display: flex;
         flex-direction: column;
-        gap: calc(5em + 1.2vw);
+        align-items: center;
+        gap: calc(2em + 3.75vw);
     }
     .menu-nav a {
-        text-align: center;
-
+        font-size: calc(2em + 3.95vw);
+        color: var(--color-text-primary);
     }
     .lang-switch {
-        width: calc(3em + 1.1vw);
-        height: calc(3em + 1.1vw);
-        font-size: calc(2em + 0.75vw);
+        display: flex; /* Включаем Flexbox */
+        justify-content: center; /* Горизонтальное центрирование */
+        align-items: center; /* Вертикальное центрирование */
+
+        font-family: 'SofiaSans-Black', sans-serif; /* Применение шрифта */
+        font-variant: small-caps;
+        color: #black;
+        cursor: pointer;
+
+        border-radius: 4vw;
+        border-style: none;
+        background: var(--color-text-orange);
+
+        width: calc(1.5em + 3.9vw);
+        height: calc(1.5em + 3.9vw);
+        font-size: calc(1.5em + 2.35vw);
+    }
+
+    .close-button {
+      position: relative; /* Используем относительное позиционирование */
+      width: 9em; /* Ширина всего меню */
+      height: 9em; /* Высота всего меню */
+      cursor: pointer; /* Курсор меняется на указатель при наведении */
+    }
+    .close-button .bar-1, .close-button .bar-2 {
+      position: absolute; /* Абсолютное позиционирование полосок */
+      top: 50%; /* Центрируем полоски по вертикали */
+      left: 50%; /* Центрируем полоски по горизонтали */
+      width: calc(5em + 1.0vw);
+      height: 1em; /* Высота полосок (их длина) */
+      background: var(--color-text-primary); /* Цвет полосок */
+      border-radius: 3px; /* Скругление углов полосок */
+      transform-origin: center; /* Центрируем точку вращения */
+    }
+    .close-button .bar-1 {
+      transform: translate(-50%, -50%) rotate(45deg); /* Поворачиваем полоску на 45 градусов и центрируем */
+
+    }
+    .close-button .bar-2 {
+      transform: translate(-50%, -50%) rotate(-45deg); /* Поворачиваем полоску на -45 градусов и центрируем */
 
     }
 
-/* Стили контента страницы */
-    .blocks-exercise {
-        align-items: center;
+    /* Контент Блог страница */
+    .blocks-blog {
+        gap: 10vw;
 
     }
-    .exercise-block {
-        flex-direction: column;
-        align-items: center;
+    .article-block {
+        padding: 2.5vw;
+        width: 35vw;
+        border-radius: 2vw;
+        gap: 4vw;
+        background: radial-gradient(black, transparent);
+    }
+    .article-img {
+        width: 30vw;
+        height: 30vw;
+    }
+    .article-title {
+        font-size: calc(2em + 1.38vw);
 
     }
-    .exercise-img {
-        width: 55vw;
-        height: 55vw;
-    }
-    .exercise-title {
-        width: 55vw;
-        font-size: calc(8em + 1.75vw);
+    .article-title p {
+        max-width: 30vw;
 
     }
 
-/* Стили подвала */
+    /* Стили для пагтнации */
+    .pagination {
+        background: rgba(0, 0, 0, 0.2);
+        margin-top: 5vw;
+        padding: 0 2.5vw;
+        width: auto;
+        height: auto;
+        border-radius: 1vw;
+        gap: 10vw
+    }
+    .first-page, .last-page, .prev-page, .next-page {
+        margin: 1vw 0;
+
+    }
+    .first-page:hover, .last-page:hover, .prev-page:hover, .next-page:hover {
+        background-color: initial;
+        color: var(--color-text-orange);
+}
+    .page-numbers {
+    display: none
+
+    }
+    .pagination-icon {
+        width: calc(2.5em + 2.6vw);
+        height: calc(2.5em + 2.7vw);
+    }
+
+    /* Разделительная полоса */
+    .spread-line {
+        width: 100%;
+        height:0.8vw;
+        border-radius: 2vw;
+        box-shadow: var(--box-shadow-inner-small);
+    }
+
+    /* Стили для подвала */
     .footer {
         flex-direction: column;
-        gap: 3vw;
-
+        margin-top: 5vw;
+        gap: 2vw;
     }
 
+    .footer .logo {
+        flex-direction: column;
+        gap: 0.8vw;
+    }
+    .footer .logo .brand-icon {
+        width: calc(2.5em + 3.6vw);
+        height: calc(2.5em + 3.7vw);
+        filter: drop-shadow(0 0 1em #ff9500) drop-shadow(0 0 0.4em #ff7d00); /* Эффект тени под иконкой */
+    }
     .footer .logo .brand-name {
-        font-size: calc(2em + 2.15vw);
+        font-size: calc(2em + 3.15vw);
 
     }
-    .footer p {
-        font-size:calc(2em + 0.55vw);
 
+    .footer p {
+        font-size:calc(1em + 2.35vw);
+
+    }
+
+    .cont-info {
+        flex-direction: row;
+        align-items: center; /* Выравниваем элементы по вертикали по центру */
+        gap: 0.5vw;
     }
     .cont-icon {
         display: none;
 
     }
-    .footer .social-icons .soc-icon {
-        width: calc(4em + 1.78vw);
-        height: calc(4em + 1.5vw);
-    }
+    .soc-icon {
+        width: calc(2.5em + 4.6vw);
+        height: calc(2.5em + 4.7vw);
+        margin-top: 2vw;
+        }
 
 }
 
-/* Для экранов шириной 769px - 1024px (Высота экрана: 1024px - 1366px)*/
-@media (min-width: 769px) and (max-width: 1024px) {
+
+/* Для экранов шириной 641px - 1200px (Высота экрана: 1024px - 1366px)*/
+@media (min-width: 641px) and (max-width: 1200px) {
     body{
         background-image: url('../../img/bg/bg_1280x720.png'); /* Замените 'your-image-url.jpg' на URL вашего изображения */
 
@@ -807,4 +778,3 @@ body {
 
 }
 
-/* Для экранов шириной 1025px и больше  (Высота экрана: 768px - 1600px и выше)*/
