@@ -134,13 +134,16 @@ body {
     flex-direction: row; /* Располагаем элементы по горизонтали */
     align-items: center; /* Выравниваем элементы по вертикали по центру */
     gap: calc(2em + 1.2vw);
-    /* transition: visibility 0s, opacity 0.5s ease;
-    /* visibility: hidden; /* Скрываем модальное меню по умолчанию */
-    /* opacity: 0; /* Прозрачность по умолчанию */
 }
 .modal-menu.open {
     visibility: visible; /* Показываем модальное меню */
     opacity: 1; /* Устанавливаем непрозрачность */
+}
+.modal-content {
+    display: flex; /* Используем flexbox для расположения элементов */
+    flex-direction: row; /* Располагаем элементы по горизонтали */
+    align-items: center; /* Выравниваем элементы по вертикали по центру */
+    gap: calc(2em + 1.2vw);
 }
 
 .menu-nav {
@@ -464,8 +467,6 @@ body {
 
     /*Модальное меню */
     .modal-menu {
-        display: flex; /* Используем flexbox для расположения элементов */
-        flex-direction: column; /* Располагаем элементы по горизонтали */
         position: fixed;
         transition: visibility 0s, opacity 0.5s ease;
 
@@ -714,8 +715,6 @@ body {
 
     /*Модальное меню */
     .modal-menu {
-        display: flex; /* Используем flexbox для расположения элементов */
-        flex-direction: column; /* Располагаем элементы по горизонтали */
         position: fixed;
         transition: visibility 0s, opacity 0.5s ease;
 
@@ -758,18 +757,7 @@ body {
         color: var(--color-text-primary);
     }
     .lang-switch {
-        display: flex; /* Включаем Flexbox */
-        justify-content: center; /* Горизонтальное центрирование */
-        align-items: center; /* Вертикальное центрирование */
-
-        font-family: 'SofiaSans-Black', sans-serif; /* Применение шрифта */
-        font-variant: small-caps;
-        color: #black;
-        cursor: pointer;
-
         border-radius: 4vw;
-        border-style: none;
-        background: var(--color-text-orange);
 
         width: calc(1.5em + 3.9vw);
         height: calc(1.5em + 3.9vw);
