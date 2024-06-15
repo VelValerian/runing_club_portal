@@ -48,6 +48,9 @@
     --color-text-secondary: #EDEAE8;
     --color-text-orange: #FF9447;
     --color-text-gradient: linear-gradient(137deg, #ff9447 0%, #ff510b 100%);
+    --color-button-gradient: linear-gradient(137deg, #ff9447 0%, #ff510b 100%);
+    --color-button-hover: linear-gradient(137deg, #ff510b 0%, #ff9447 100%);
+    --color-button-click: linear-gradient(137deg, #35DA8B 0%, #057B42 100%);
 
     --box-shadow-outer-large: 1.5vw 0.5vw 1vw 0 rgba(0, 0, 0, 0.5), inset 1vw 1vw 2vw 0 rgba(255, 255, 255, 0.25), inset -1vw -1vw 3vw 0 rgba(0, 0, 0, 0.6);
         --box-shadow-outer-small: 6px 4px 8px 0 rgba(0, 0, 0, 0.5), inset 4px 4px 6px 0 rgba(255, 255, 255, 0.25), inset -7px -7px 5px 0 rgba(0, 0, 0, 0.6);
@@ -178,6 +181,19 @@ body {
     font-size: calc(1.5em + 0.35vw);
 }
 
+.logo-modal{
+width: 0px;
+display: none;
+}
+.footer-modal{
+width: 0px;
+display: none;
+}
+.close-button {
+display: initial;
+
+}
+
 /* Контент  страницы */
 .content {
     display: flex; /* Используем flexbox для расположения элементов */
@@ -193,13 +209,105 @@ body {
     line-height: 100%;
     letter-spacing: 0.15em;
     font-variant: small-caps;
+    margin: 0 50%;
+    text-align: center;
     font-size: calc(5em + 4vw);
     color: var(--color-text-primary);
 
 
 }
 /*----------------------------------------------------------------*/
-/* Контент  `Занятия` страница */
+/* Контент  `Описание занятий` страница (p-exercise.html)*/
+.blocks-page {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5vw;
+}
+.page-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+}
+.page-img {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 10%;
+    box-shadow: 0 -3px 10px 0 rgba(255, 255, 255, 0.05), 0 0 10px 0 rgba(255, 255, 255, 0.1), inset 0 2px 5px 0 rgba(0, 0, 0, 0.5), inset 0 -2px 5px 0 rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.15);
+    background-image: url('../img/exercise/img_1.webp'); /* URL изображения */
+    background-size: cover; /* Изображение полностью покрывает элемент */
+    background-repeat: no-repeat; /* Изображение не повторяется */
+    background-position: center; /* Центрируем изображение */
+
+}
+.page-text {
+    font-family: 'SofiaSans-SemiBold', sans-serif; /* Применение шрифта */
+    line-height: 115%;
+    letter-spacing: 0.12em;
+    font-variant: small-caps;
+    max-width: 55vw;
+    height: auto;
+    font-size: calc(2em + 0.7vw);
+    color: var(--color-text-secondary);
+    text-indent:2em;
+
+    /* Включение автоматического переноса слов */
+    hyphens: auto;
+    -ms-hyphens: auto; /* Это свойство поддерживается в старых версиях IE */
+    word-break: break-word; /* Для переноса слов */
+
+    /*Подложка под текст */
+    padding: 3vw;
+    border-radius: 2vw;
+    box-shadow: 0 -3px 10px 0 rgba(255, 255, 255, 0.05), 0 0 10px 0 rgba(255, 255, 255, 0.1), inset 0 2px 5px 0 rgba(0, 0, 0, 0.5), inset 0 -2px 5px 0 rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.65);
+}
+
+/*--------------------------------*/
+/* Стили кнопки */
+.button {
+    display: inline-block;
+    padding: 1em 3em;
+    margin: 2vw;
+    font-family: 'SofiaSans-Black', sans-serif; /* Применение шрифта */
+    line-height: 120%;
+    letter-spacing: 0.11em;
+    font-variant: small-caps;
+    font-size:calc(2em + 0.75vw);
+    color: var(--color-text-primary);
+    background: var(--color-button-gradient);
+    box-shadow: 6px 6px 12px 0 rgba(0, 0, 0, 0.45), inset 8px 4px 12px 0 rgba(255, 255, 255, 0.35), inset -8px -4px 12px 0 rgba(0, 0, 0, 0.75);
+
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+/* Стили при наведении */
+.button:hover {
+    background: var(--color-button-hover);
+
+}
+/* Стили при фокусировке */
+.button:focus {
+    outline: none;
+    box-shadow: 6px 6px 12px 0 rgba(0, 0, 0, 0.45), inset 8px 4px 12px 0 rgba(255, 255, 255, 0.35), inset -8px -4px 12px 0 rgba(0, 0, 0, 0.75);
+
+}
+/* Стили при нажатии */
+.button:active {
+    transition: background-color 0.1s ease;
+    background: var(--color-button-click);
+    box-shadow: 6px 6px 12px 0 rgba(0, 0, 0, 0.45), inset 8px 4px 12px 0 rgba(255, 255, 255, 0.35), inset -8px -4px 12px 0 rgba(0, 0, 0, 0.75);
+
+}
+
+/*----------------------------------------------------------------*/
+/* Контент  `Занятия` страница (exercise.html)*/
 .blocks-exercise {
     display: flex;
     flex-direction: row;
@@ -278,7 +386,7 @@ body {
 
 }
 /*----------------------------------------------------------------*/
-/* Контент Блог страница */
+/* Контент Блог страница (blog.html)*/
 .blocks-blog {
     display: flex;
     flex-direction: row;
