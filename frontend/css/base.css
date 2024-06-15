@@ -216,6 +216,7 @@ display: initial;
 
 
 }
+
 /*----------------------------------------------------------------*/
 /* Контент  `Описание занятий` страница (p-exercise.html)*/
 .blocks-page {
@@ -248,7 +249,7 @@ display: initial;
     line-height: 115%;
     letter-spacing: 0.12em;
     font-variant: small-caps;
-    max-width: 55vw;
+    max-width: 45vw;
     height: auto;
     font-size: calc(2em + 0.7vw);
     color: var(--color-text-secondary);
@@ -775,8 +776,8 @@ display: initial;
         color: var(--color-text-primary);
     }
     .footer-modal .soc-icon {
-        width: calc(10em + 5vw);
-        height: calc(10em + 5vw);
+        width: calc(5em + 3vw);
+        height: calc(5em + 3vw);
         margin-top: 4vw;
         }
 
@@ -815,7 +816,7 @@ display: initial;
     .footer-modal{
     width: 0px;
     display: none;
-}
+    }
     .close-button {
     display: initial;
 
@@ -823,7 +824,25 @@ display: initial;
 
     .page-title {
         font-size: calc(4em + 4vw);
+        margin: 0;
+    }
 
+/*----------------------------------------------------------------*/
+/* Контент  `Описание занятий` страница (p-exercise.html)*/
+.page-img {
+    width: 55vw;
+    height: 55vw;
+}
+.page-text {
+    max-width: 78vw;
+    height: auto;
+    font-size: calc(2em + 1.7vw);
+}
+
+/*--------------------------------*/
+    /* Стили кнопки */
+    .button {
+        border-radius: 1.2vw;
     }
 /*----------------------------------------------------------------*/
     /* Контент  `Занятия` страница */
@@ -1178,6 +1197,30 @@ display: initial;
         font-size: calc(4em + 4vw);
 
     }
+
+/*----------------------------------------------------------------*/
+/* Контент  `Описание занятий` страница (p-exercise.html)*/
+.page-img {
+    width: 45vw;
+    height: 45vw;
+}
+.page-text {
+    max-width: 65vw;
+    height: auto;
+    font-size: calc(4em + 0.5vw);
+
+    /* Включение автоматического переноса слов */
+    hyphens: auto;
+    -ms-hyphens: auto; /* Это свойство поддерживается в старых версиях IE */
+    word-break: break-word; /* Для переноса слов */
+
+    /*Подложка под текст */
+    padding: 3vw;
+    border-radius: 2vw;
+    box-shadow: 0 -3px 10px 0 rgba(255, 255, 255, 0.05), 0 0 10px 0 rgba(255, 255, 255, 0.1), inset 0 2px 5px 0 rgba(0, 0, 0, 0.5), inset 0 -2px 5px 0 rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.65);
+}
+
 /*----------------------------------------------------------------*/
     /* Контент  `Занятия` страница */
     .exercise-img {
