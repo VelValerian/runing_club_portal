@@ -218,6 +218,92 @@ display: initial;
 }
 
 /*----------------------------------------------------------------*/
+/* Контент  `Про меня` страница */
+.page-title-about {
+    font-family: 'SofiaSans-ExtraLight', sans-serif; /* Применение шрифта */
+    line-height: 100%;
+    letter-spacing: 0.15em;
+    font-variant: small-caps;
+    margin: 0;
+    text-align: center;
+    font-size: calc(5em + 4vw);
+    color: var(--color-text-primary);
+
+}
+
+.blocks-about {
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+}
+.block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5vw;
+}
+.about-img {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 10%;
+    box-shadow: 0 -3px 10px 0 rgba(255, 255, 255, 0.05), 0 0 10px 0 rgba(255, 255, 255, 0.1), inset 0 2px 5px 0 rgba(0, 0, 0, 0.5), inset 0 -2px 5px 0 rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.15);
+    background-size: cover; /* Изображение полностью покрывает элемент */
+    background-repeat: no-repeat; /* Изображение не повторяется */
+    background-position: center; /* Центрируем изображение */
+
+}
+
+.about-img[data-img="1"] {
+    background-image: url('../img/about/img_1.webp'); /* URL изображения */
+
+}
+.about-img[data-img="2"] {
+    background-image: url('../img/about/img_2.webp'); /* URL изображения */
+
+}
+.about-img[data-img="3"] {
+    background-image: url('../img/about/img_3.webp'); /* URL изображения */
+
+}
+
+
+.about-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30vw;
+
+}
+.about-title-block {
+    font-family: 'SofiaSans-ExtraBold', sans-serif; /* Применение шрифта */
+    line-height: 115%;
+    letter-spacing: 0.12em;
+    font-variant: small-caps;
+    width: 55vw;
+    font-size: calc(2em + 1.1vw);
+    color: var(--color-text-orange);
+    text-align: left;
+
+}
+.about-text-block {
+    width: 100%;
+    font-family: 'SofiaSans-SemiBold', sans-serif; /* Применение шрифта */
+    line-height: 120%;
+    letter-spacing: 0.11em;
+    font-variant: small-caps;
+    font-size: calc(2em + 0.7vw);
+    color: var(--color-text-primary);
+    text-align: left;
+    text-indent:2em;
+
+    /* Включение автоматического переноса слов */
+      hyphens: auto;
+      -ms-hyphens: auto; /* Это свойство поддерживается в старых версиях IE */
+      word-break: break-word; /* Для переноса слов */
+
+}
+/*----------------------------------------------------------------*/
 /* Контент  `Описание занятий` страница (p-exercise.html)*/
 .blocks-page {
     display: flex;
@@ -659,7 +745,7 @@ display: initial;
         position: fixed;
         transition: visibility 0s, opacity 0s ease;
 
-        width: 110%;
+        width: 100%;
         height: 100%;
         padding: 10vw;
         top: 0;
@@ -828,21 +914,67 @@ display: initial;
     }
 
 /*----------------------------------------------------------------*/
-/* Контент  `Описание занятий` страница (p-exercise.html)*/
-.page-img {
-    width: 55vw;
-    height: 55vw;
-}
-.page-text {
-    max-width: 78vw;
-    height: auto;
-    font-size: calc(2em + 1.7vw);
-}
+    /* Контент  `Про меня` страница */
+    .page-title-about {
+        font-family: 'SofiaSans-ExtraLight', sans-serif; /* Применение шрифта */
+        line-height: 100%;
+        letter-spacing: 0.15em;
+        font-variant: small-caps;
+        margin: 0;
+        text-align: center;
+        font-size: calc(5em + 4vw);
+        color: var(--color-text-primary);
+
+    }
+
+    .blocks-about {
+        margin-top: 5vw;
+
+    }
+    .block {
+        flex-direction: column;
+
+    }
+    .about-img {
+        width: 40vw;
+        height: 40vw;
+        margin-left: 10vw;
+    }
+
+    .about-txt {
+        width: 78vw;
+
+    }
+    .about-title-block {
+        font-size: calc(3em + 1.7vw);
+
+    }
+    .about-text-block {
+        font-size: calc(3em + 1.1vw);
+
+    }
+
+/*----------------------------------------------------------------*/
+    /* Контент  `Описание занятий` страница (p-exercise.html)*/
+    .page-block {
+        gap: 10vw;
+
+    }
+    .page-img {
+        width: 55vw;
+        height: 55vw;
+    }
+    .page-text {
+        max-width: 78vw;
+        height: auto;
+        font-size: calc(2em + 1.7vw);
+    }
 
 /*--------------------------------*/
     /* Стили кнопки */
     .button {
         border-radius: 1.2vw;
+
     }
 /*----------------------------------------------------------------*/
     /* Контент  `Занятия` страница */
@@ -966,8 +1098,7 @@ display: initial;
         margin-top: 2vw;
         }
 
-}
-
+    }
 
 /* Для экранов шириной 641px - 1200px (Высота экрана: 1024px - 1366px)*/
 @media (min-width: 641px) and (max-width: 1200px) {
@@ -1030,7 +1161,7 @@ display: initial;
         position: fixed;
         transition: visibility 0s, opacity 0s ease;
 
-        width: 110%;
+        width: 100%;
         height: 100%;
         padding: 10vw;
         top: 0;
@@ -1193,33 +1324,83 @@ display: initial;
 
 }
 
+    .content {
+        gap: 10vw;
+
+    }
     .page-title {
         font-size: calc(4em + 4vw);
 
     }
 
 /*----------------------------------------------------------------*/
-/* Контент  `Описание занятий` страница (p-exercise.html)*/
-.page-img {
-    width: 45vw;
-    height: 45vw;
-}
-.page-text {
-    max-width: 65vw;
-    height: auto;
-    font-size: calc(4em + 0.5vw);
+    /* Контент  `Про меня` страница */
+    .page-title-about {
+        font-family: 'SofiaSans-ExtraLight', sans-serif; /* Применение шрифта */
+        line-height: 100%;
+        letter-spacing: 0.15em;
+        font-variant: small-caps;
+        margin: 0;
+        text-align: center;
+        font-size: calc(5em + 4vw);
+        color: var(--color-text-primary);
 
-    /* Включение автоматического переноса слов */
-    hyphens: auto;
-    -ms-hyphens: auto; /* Это свойство поддерживается в старых версиях IE */
-    word-break: break-word; /* Для переноса слов */
+    }
 
-    /*Подложка под текст */
-    padding: 3vw;
-    border-radius: 2vw;
-    box-shadow: 0 -3px 10px 0 rgba(255, 255, 255, 0.05), 0 0 10px 0 rgba(255, 255, 255, 0.1), inset 0 2px 5px 0 rgba(0, 0, 0, 0.5), inset 0 -2px 5px 0 rgba(255, 255, 255, 0.1);
-    background: rgba(0, 0, 0, 0.65);
-}
+    .blocks-about {
+        margin-top: 5vw;
+
+    }
+    .block {
+        flex-direction: column;
+
+    }
+    .about-img {
+        width: 40vw;
+        height: 40vw;
+        margin-left: 10vw;
+
+    }
+
+    .about-txt {
+        width: 70vw;
+
+    }
+    .about-title-block {
+        font-size: calc(3em + 1.7vw);
+
+    }
+    .about-text-block {
+        font-size: calc(3em + 1.1vw);
+
+    }
+
+/*----------------------------------------------------------------*/
+    /* Контент  `Описание занятий` страница (p-exercise.html)*/
+    .page-block {
+        gap: 5vw;
+
+    }
+    .page-img {
+        width: 45vw;
+        height: 45vw;
+    }
+    .page-text {
+        max-width: 65vw;
+        height: auto;
+        font-size: calc(4em + 0.5vw);
+
+        /* Включение автоматического переноса слов */
+        hyphens: auto;
+        -ms-hyphens: auto; /* Это свойство поддерживается в старых версиях IE */
+        word-break: break-word; /* Для переноса слов */
+
+        /*Подложка под текст */
+        padding: 3vw;
+        border-radius: 2vw;
+        box-shadow: 0 -3px 10px 0 rgba(255, 255, 255, 0.05), 0 0 10px 0 rgba(255, 255, 255, 0.1), inset 0 2px 5px 0 rgba(0, 0, 0, 0.5), inset 0 -2px 5px 0 rgba(255, 255, 255, 0.1);
+        background: rgba(0, 0, 0, 0.65);
+    }
 
 /*----------------------------------------------------------------*/
     /* Контент  `Занятия` страница */
