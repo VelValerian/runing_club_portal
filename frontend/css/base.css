@@ -218,7 +218,7 @@ display: initial;
 }
 
 /*----------------------------------------------------------------*/
-/* Контент  главной страницы */
+/* Контент  главной страницы (index.html)*/
 .content {
     width: 100%;
 
@@ -289,13 +289,13 @@ display: initial;
     color: var(--color-text-secondary);
 }
 
-.description {
+.description-main {
     display: flex; /* Используем flexbox для расположения полосок */
     align-items: center; /* Выравниваем полоски по горизонтали по центру */
     justify-content: center;
     margin: 10vw 5vw 0 5vw;
 }
-.description p {
+.description-main p {
     font-family: 'SofiaSans-Bold', sans-serif; /* Применение шрифта */
     line-height: 117%;
     letter-spacing: 0.12em;
@@ -307,7 +307,7 @@ display: initial;
 }
 
 /*----------------------------------------------------------------*/
-/* Контент  `Про меня` страница */
+/* Контент  `Про меня` страница (about.html)*/
 .page-title-about {
     font-family: 'SofiaSans-ExtraLight', sans-serif; /* Применение шрифта */
     line-height: 100%;
@@ -390,6 +390,86 @@ display: initial;
       hyphens: auto;
       -ms-hyphens: auto; /* Это свойство поддерживается в старых версиях IE */
       word-break: break-word; /* Для переноса слов */
+
+}
+
+/*----------------------------------------------------------------*/
+/* Контент  `Занятия` страница (exercise.html)*/
+.blocks-exercise {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10vw;
+}
+.exercise-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+}
+.exercise-img {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 10%;
+    box-shadow: 0 -3px 10px 0 rgba(255, 255, 255, 0.05), 0 0 10px 0 rgba(255, 255, 255, 0.1), inset 0 2px 5px 0 rgba(0, 0, 0, 0.5), inset 0 -2px 5px 0 rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
+    background-size: cover; /* Изображение полностью покрывает элемент */
+    background-repeat: no-repeat; /* Изображение не повторяется */
+    background-position: center; /* Центрируем изображение */
+
+}
+.exercise-title {
+    font-family: 'SofiaSans-ExtraBold', sans-serif; /* Применение шрифта */
+    line-height: 115%;
+    letter-spacing: 0.12em;
+    font-variant: small-caps;
+    max-width: 13vw;
+    display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp:2;
+	overflow: hidden;
+	text-align: center;
+    font-size: calc(1em + 1vw);
+    color: var(--color-text-secondary);
+    text-align: center;
+
+}
+.description {
+    font-family: 'SofiaSans-SemiBold', sans-serif; /* Применение шрифта */
+    line-height: 115%;
+    letter-spacing: 0.12em;
+    font-variant: small-caps;
+    max-width: 55vw;
+    font-size: calc(2em + 0.7vw);
+    color: var(--color-text-secondary);
+    text-indent:2em;
+
+    /* Включение автоматического переноса слов */
+/*    hyphens: auto;
+/*    -ms-hyphens: auto; /* Это свойство поддерживается в старых версиях IE */
+/*    word-break: break-word; /* Для переноса слов */
+
+}
+
+.exercise-img[data-img="1"] {
+    background-image: url('../img/exercise/img_1.webp'); /* URL изображения */
+
+}
+.exercise-img[data-img="2"] {
+    background-image: url('../img/exercise/img_2.webp'); /* URL изображения */
+
+}
+.exercise-img[data-img="3"] {
+    background-image: url('../img/exercise/img_3.webp'); /* URL изображения */
+
+}
+.exercise-img[data-img="4"] {
+    background-image: url('../img/exercise/img_4.webp'); /* URL изображения */
+
+}
+.exercise-img[data-img="5"] {
+    background-image: url('../img/exercise/img_5.webp'); /* URL изображения */
 
 }
 
@@ -483,85 +563,6 @@ display: initial;
 
 }
 
-/*----------------------------------------------------------------*/
-/* Контент  `Занятия` страница (exercise.html)*/
-.blocks-exercise {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10vw;
-}
-.exercise-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2vw;
-}
-.exercise-img {
-    width: 15vw;
-    height: 15vw;
-    border-radius: 10%;
-    box-shadow: 0 -3px 10px 0 rgba(255, 255, 255, 0.05), 0 0 10px 0 rgba(255, 255, 255, 0.1), inset 0 2px 5px 0 rgba(0, 0, 0, 0.5), inset 0 -2px 5px 0 rgba(255, 255, 255, 0.1);
-    background: rgba(255, 255, 255, 0.15);
-    background-size: cover; /* Изображение полностью покрывает элемент */
-    background-repeat: no-repeat; /* Изображение не повторяется */
-    background-position: center; /* Центрируем изображение */
-
-}
-.exercise-title {
-    font-family: 'SofiaSans-ExtraBold', sans-serif; /* Применение шрифта */
-    line-height: 115%;
-    letter-spacing: 0.12em;
-    font-variant: small-caps;
-    max-width: 13vw;
-    display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp:2;
-	overflow: hidden;
-	text-align: center;
-    font-size: calc(1em + 1vw);
-    color: var(--color-text-secondary);
-    text-align: center;
-
-}
-.description {
-    font-family: 'SofiaSans-SemiBold', sans-serif; /* Применение шрифта */
-    line-height: 115%;
-    letter-spacing: 0.12em;
-    font-variant: small-caps;
-    max-width: 55vw;
-    font-size: calc(2em + 0.7vw);
-    color: var(--color-text-secondary);
-    text-indent:2em;
-
-    /* Включение автоматического переноса слов */
-/*    hyphens: auto;
-/*    -ms-hyphens: auto; /* Это свойство поддерживается в старых версиях IE */
-/*    word-break: break-word; /* Для переноса слов */
-
-}
-
-.exercise-img[data-img="1"] {
-    background-image: url('../img/exercise/img_1.webp'); /* URL изображения */
-
-}
-.exercise-img[data-img="2"] {
-    background-image: url('../img/exercise/img_2.webp'); /* URL изображения */
-
-}
-.exercise-img[data-img="3"] {
-    background-image: url('../img/exercise/img_3.webp'); /* URL изображения */
-
-}
-.exercise-img[data-img="4"] {
-    background-image: url('../img/exercise/img_4.webp'); /* URL изображения */
-
-}
-.exercise-img[data-img="5"] {
-    background-image: url('../img/exercise/img_5.webp'); /* URL изображения */
-
-}
 
 /*----------------------------------------------------------------*/
 /* Контент Блог страница (blog.html)*/
