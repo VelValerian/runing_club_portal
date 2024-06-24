@@ -126,9 +126,21 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.hamburger-menu {
-    display: none;
+.menu{
+    display: flex; /* Используем flexbox для расположения элементов */
+    width: auto;
+    flex-direction: row; /* Располагаем элементы по горизонтали */
+    align-items: center; /* Выравниваем элементы по вертикали по центру */
+}
 
+.hamburger-menu-icon {
+    fill: var(--color-text-orange);
+    width: calc(3em + 1.6vw);
+    height: calc(3em + 1.9vw);
+}
+.hamburger-menu.hidden {
+    visibility: hidden; /* Скрываем модальное меню по умолчанию */
+    opacity: 0; /* Прозрачность по умолчанию */
 }
 
 /*Модальное меню */
@@ -137,10 +149,15 @@ body {
     flex-direction: row; /* Располагаем элементы по горизонтали */
     align-items: center; /* Выравниваем элементы по вертикали по центру */
     justify-content: center;
+    transition: visibility 0s, opacity 0.5s ease;
+    visibility: hidden; /* Скрываем модальное меню по умолчанию */
+    opacity: 0; /* Прозрачность по умолчанию */
+    width: 0px;
 }
 .modal-menu.open {
     visibility: visible; /* Показываем модальное меню */
     opacity: 1; /* Устанавливаем непрозрачность */
+    width: auto;
 }
 .modal-content {
     display: flex; /* Используем flexbox для расположения элементов */
@@ -170,9 +187,11 @@ body {
 
     font-family: 'SofiaSans-Black', sans-serif; /* Применение шрифта */
     font-variant: small-caps;
+    line-height: 90%;
+    letter-spacing: 0.05em;
     cursor: pointer;
 
-    border-radius: 0.75vw;
+    border-radius: 50%;
     border-style: none;
     background: var(--color-text-orange);
 
@@ -180,17 +199,10 @@ body {
     height: calc(1.5em + 0.9vw);
     font-size: calc(1.5em + 0.35vw);
 }
-
-.logo-modal{
-width: 0px;
-display: none;
-}
-.footer-modal{
-width: 0px;
-display: none;
-}
-.close-button {
-display: initial;
+.close-icon {
+    fill: var(--color-text-orange);
+    width: calc(2em + 1.6vw);
+    height: calc(2em + 1.9vw);
 
 }
 
@@ -400,7 +412,7 @@ display: initial;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10vw;
+    gap: 5vw;
 }
 .exercise-block {
     display: flex;
