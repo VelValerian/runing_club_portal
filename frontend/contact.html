@@ -65,7 +65,27 @@
             <h1 class="page-title">
                 Контакты
             </h1>
+            <div class="page-block">
+                <div class="page-text">
+                        <p lang="ru">Идейные соображения высшего порядка, а также сложившаяся структура организации
+                        способствует подготовки и реализации модели развития. Идейные соображения высшего порядка,
+                        а также сложившаяся структура организации позволяет выполнять важные задания по разработке
+                        соответствующий условий активизации.</p>
+                    </div>
+                <form id="contact-form"> <!--action="/submit" method="post">-->
+                    <div>
+                        <label for="name">Ваше Имя</label>
+                        <input type="text" id="name" name="name" placeholder="Ваше Имя" required>
 
+                        <label for="contact">Контактная информация</label>
+                        <input type="text" id="contact" name="contact" placeholder="Контактная информация" required>
+
+                        <label for="message">Сообщение</label>
+                        <textarea class="message" id="message" name="message" rows="9" placeholder="Сообщение..." required></textarea>
+                    </div>
+                    <button type="submit" class="button">Отправить</button>
+                </form>
+            </div>
             <div class="spread-line"></div>
         </div>
         <footer class="footer" id="footer">
@@ -106,5 +126,6 @@
     </main>
     <script src="./jscript/dynamic-txt.js"></script>
     <script src="./jscript/modal-menu.js"></script>
+    <script src="./jscript/contact-form.js"></script>
 </body>
 </html>

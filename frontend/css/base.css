@@ -53,7 +53,7 @@
     --color-button-click: linear-gradient(137deg, #35DA8B 0%, #057B42 100%);
 
     --box-shadow-outer-large: 1.5vw 0.5vw 1vw 0 rgba(0, 0, 0, 0.5), inset 1vw 1vw 2vw 0 rgba(255, 255, 255, 0.25), inset -1vw -1vw 3vw 0 rgba(0, 0, 0, 0.6);
-        --box-shadow-outer-small: 6px 4px 8px 0 rgba(0, 0, 0, 0.5), inset 4px 4px 6px 0 rgba(255, 255, 255, 0.25), inset -7px -7px 5px 0 rgba(0, 0, 0, 0.6);
+    --box-shadow-outer-small: 6px 6px 12px 0 rgba(0, 0, 0, 0.45), inset 8px 4px 12px 0 rgba(255, 255, 255, 0.35), inset -8px -4px 12px 0 rgba(0, 0, 0, 0.75);
     --box-shadow-outer-mobile: 0vw 0vw 3vw 0 rgba(0, 0, 0, 0.6), inset 4vw 4vw 4vw 0 rgba(255, 255, 255, 0.25), inset -4vw -4vw 2vw 0 rgba(0, 0, 0, 0.4);
 
     --box-shadow-inner-small: 0 -0.2vw 0.7vw 0 rgba(255, 255, 255, 0.1), 0 0 0.4vw 0 rgba(255, 255, 255, 0.05), inset 0 -0.6vw 0.5vw 0 rgba(0, 0, 0, 0.1), inset 0.6vw 0 0.5vw 0 rgba(0, 0, 0, 0.4);
@@ -531,8 +531,8 @@ body {
     /*Подложка под текст */
     padding: 3vw;
     border-radius: 2vw;
-    box-shadow: 0 -3px 10px 0 rgba(255, 255, 255, 0.05), 0 0 10px 0 rgba(255, 255, 255, 0.1), inset 0 2px 5px 0 rgba(0, 0, 0, 0.5), inset 0 -2px 5px 0 rgba(255, 255, 255, 0.1);
-    background: rgba(0, 0, 0, 0.65);
+    box-shadow: var(--box-shadow-inner-small);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 /*--------------------------------*/
@@ -548,10 +548,10 @@ body {
     font-size:calc(2em + 0.75vw);
     color: var(--color-text-primary);
     background: var(--color-button-gradient);
-    box-shadow: 6px 6px 12px 0 rgba(0, 0, 0, 0.45), inset 8px 4px 12px 0 rgba(255, 255, 255, 0.35), inset -8px -4px 12px 0 rgba(0, 0, 0, 0.75);
+    box-shadow: var(--box-shadow-outer-small);
 
     border: none;
-    border-radius: 0.5vw;
+    border-radius: 0.8vw;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -703,6 +703,67 @@ body {
     width: calc(1em + 0.78vw);
     height: calc(1em + 0.78vw);
 }
+/*----------------------------------------------------------------*/
+/* Контент  `Контакты` страница (contact.html)*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    align-items: center;
+}
+
+label {
+    display: none;
+}
+
+
+
+input[type="text"], textarea {
+    padding: 1em;
+    margin-bottom: 20px;
+    border-radius: 0.5vw;
+    width: 75%;
+    background-color: var(--box-shadow-inner-small);
+    box-sizing: border-box;
+    box-shadow:  var(--box-shadow-inner-small);
+
+
+    font-family: 'SofiaSans-Light', sans-serif; /* Применение шрифта */
+    line-height: 105%;
+    letter-spacing: 0.15em;
+    max-width: 45vw;
+    height: auto;
+    font-size: calc(1em + 0.8vw);
+    color: var(--color-text-primary);
+    text-indent:1em;
+}
+
+textarea {
+    resize: none;
+}
+.message{
+    width: 100%;
+}
+::placeholder {
+    font-family: 'SofiaSans-Light', sans-serif; /* Применение шрифта */
+    line-height: 115%;
+    letter-spacing: 0.12em;
+    max-width: 45vw;
+    height: auto;
+    font-size: calc(0.5em + 0.25vw);
+    color: var(--color-text-orange);
+}
+
+/* Стили автозаполнения */
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            -webkit-box-shadow: !important; /* Change white to the desired background color */
+            -webkit-text-fill-color: var(--color-text-primary) !important; /* Change text color */
+            transition: background-color 5000s ease-in-out 0s;
+        }
 
 /*----------------------------------------------------------------*/
 
@@ -719,10 +780,10 @@ body {
     display: flex; /* Используем flexbox для расположения элементов */
     flex-direction: row; /* Располагаем полоски по вертикали */
     align-items: center; /* Выравниваем элементы по вертикали по центру */
-    justify-content: center;
+    justify-content: space-around;
     width: 100%;
-    margin: 5vw 0;
-    gap: 5vw;
+    margin: 5vw 0 0 0;
+    gap: 12vw;
 }
 
 .footer .logo {
@@ -763,10 +824,10 @@ body {
 
 .cont-info {
     display: flex; /* Используем flexbox для расположения элементов */
-    flex-direction: column; /* Располагаем полоски по вертикали */
+    flex-direction: row; /* Располагаем полоски по вертикали */
     align-items: flex-start; /* Выравниваем элементы по вертикали по центру */
     justify-content: center;
-    gap: 0.5vw;
+    gap: 2vw;
 }
 .location, .cont-num {
     display: flex; /* Используем flexbox для расположения элементов */
@@ -1603,7 +1664,7 @@ body {
         /*Подложка под текст */
         padding: 3vw;
         border-radius: 2vw;
-        box-shadow: 0 -3px 10px 0 rgba(255, 255, 255, 0.05), 0 0 10px 0 rgba(255, 255, 255, 0.1), inset 0 2px 5px 0 rgba(0, 0, 0, 0.5), inset 0 -2px 5px 0 rgba(255, 255, 255, 0.1);
+        box-shadow:  var(--box-shadow-inner-small);
         background: rgba(0, 0, 0, 0.65);
     }
 
