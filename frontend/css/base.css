@@ -203,6 +203,7 @@ body {
     fill: var(--color-text-orange);
     width: calc(2em + 1.6vw);
     height: calc(2em + 1.9vw);
+    cursor: pointer;
 
 }
 
@@ -231,11 +232,6 @@ body {
 
 /*----------------------------------------------------------------*/
 /* Контент  главной страницы (index.html)*/
-.content {
-    width: 100%;
-
-}
-
 .header .logo-main {
     display: none;
 
@@ -715,9 +711,8 @@ form {
 
 label {
     display: none;
+
 }
-
-
 
 input[type="text"], textarea {
     padding: 1em;
@@ -741,9 +736,11 @@ input[type="text"], textarea {
 
 textarea {
     resize: none;
+
 }
 .message{
     width: 100%;
+
 }
 ::placeholder {
     font-family: 'SofiaSans-Light', sans-serif; /* Применение шрифта */
@@ -756,14 +753,14 @@ textarea {
 }
 
 /* Стили автозаполнения */
-        input:-webkit-autofill,
-        input:-webkit-autofill:hover,
-        input:-webkit-autofill:focus,
-        input:-webkit-autofill:active {
-            -webkit-box-shadow: !important; /* Change white to the desired background color */
-            -webkit-text-fill-color: var(--color-text-primary) !important; /* Change text color */
-            transition: background-color 5000s ease-in-out 0s;
-        }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: !important; /* Change white to the desired background color */
+    -webkit-text-fill-color: var(--color-text-primary) !important; /* Change text color */
+    transition: background-color 5000s ease-in-out 0s;
+}
 
 /*----------------------------------------------------------------*/
 
@@ -1819,4 +1816,34 @@ textarea {
         margin-top: 2vw;
         }
 
+}
+
+
+/*----------------------------------------------------------------*/
+/* Стили для модального окна статьи */
+.modal-article {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 1);
+    background-image: url('../img/bg/bg_1920x1080.png');/* URL фонового изображения */
+    background-size: cover; /* Растягиваем изображение на всю площадь */
+    background-position: center; /* Центрируем изображение */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-article .modal-body {
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none; /* скрываем полосу прокрутки Firefox */
+    -ms-overflow-style: none; /* скрываем полосу прокрутки IE/Edge */
+}
+
+.modal-article .modal-body::-webkit-scrollbar {
+    display: none; /* скрываем полосу прокрутки в Chrome, Safari и Opera */
 }
