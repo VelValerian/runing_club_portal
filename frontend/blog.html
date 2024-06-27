@@ -67,7 +67,7 @@
             </h1>
             <div class="page" id="page-1">
                 <div class="blocks-blog">
-                <a href="#">
+                <a href=# class="article-link" data-article-url="p-exercise.html">
                     <div class="article-block">
                         <div class="article-img" data-img="1"></div>
                         <div class="article-title">
@@ -107,7 +107,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="#">
+                <a href=# class="article-link" data-article-url="p-exercise.html">
                     <div class="article-block">
                         <div class="article-img" data-img="6"></div>
                         <div class="article-title">
@@ -384,7 +384,16 @@
             </div>
         </footer>
     </main>
+
+        <!-- Контейнер для модальных окон -->
+    <div id="modal-container" class="modal-article">
+        <div class="modal-body">
+            <div id="article-content"></div>
+        </div>
+    </div>
+
     <script src="./jscript/pagination.js"></script>
     <script src="./jscript/modal-menu.js"></script>
+    <script src="./jscript/modal-article.js"></script>
 </body>
 </html>

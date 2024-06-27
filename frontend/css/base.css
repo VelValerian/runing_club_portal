@@ -849,6 +849,36 @@ input:-webkit-autofill:active {
     height: calc(3em + 1.9vw);
     }
 
+/*----------------------------------------------------------------*/
+/* Стили для модального окна статьи */
+.modal-article {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 1);
+    background-image: url('../img/bg/bg_1920x1080.png');/* URL фонового изображения */
+    background-size: cover; /* Растягиваем изображение на всю площадь */
+    background-position: center; /* Центрируем изображение */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-article .modal-body {
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none; /* скрываем полосу прокрутки Firefox */
+    -ms-overflow-style: none; /* скрываем полосу прокрутки IE/Edge */
+}
+
+.modal-article .modal-body::-webkit-scrollbar {
+    display: none; /* скрываем полосу прокрутки в Chrome, Safari и Opera */
+}
+/*----------------------------------------------------------------*/
+
 /* Для экранов шириной 320px - 480px  (Высота экрана: 480px - 800px)*/
 @media (max-width: 640px) {
     body {
@@ -1819,31 +1849,3 @@ input:-webkit-autofill:active {
 }
 
 
-/*----------------------------------------------------------------*/
-/* Стили для модального окна статьи */
-.modal-article {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 1);
-    background-image: url('../img/bg/bg_1920x1080.png');/* URL фонового изображения */
-    background-size: cover; /* Растягиваем изображение на всю площадь */
-    background-position: center; /* Центрируем изображение */
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-article .modal-body {
-    height: 100%;
-    overflow-y: auto;
-    scrollbar-width: none; /* скрываем полосу прокрутки Firefox */
-    -ms-overflow-style: none; /* скрываем полосу прокрутки IE/Edge */
-}
-
-.modal-article .modal-body::-webkit-scrollbar {
-    display: none; /* скрываем полосу прокрутки в Chrome, Safari и Opera */
-}
