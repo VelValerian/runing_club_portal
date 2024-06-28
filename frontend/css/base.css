@@ -223,10 +223,8 @@ body {
     letter-spacing: 0.15em;
     font-variant: small-caps;
     text-align: center;
-    font-size: calc(5em + 2vw);
+    font-size: calc(5em + 4vw);
     color: var(--color-text-primary);
-
-
 }
 
 /*----------------------------------------------------------------*/
@@ -315,15 +313,8 @@ body {
 
 /*----------------------------------------------------------------*/
 /* Контент  `Про меня` страница (about.html)*/
-.page-title-about {
-    font-family: 'SofiaSans-ExtraLight', sans-serif; /* Применение шрифта */
-    line-height: 100%;
-    letter-spacing: 0.15em;
-    font-variant: small-caps;
+.page-title {
     margin: 0;
-    text-align: center;
-    font-size: calc(5em + 4vw);
-    color: var(--color-text-primary);
 
 }
 
@@ -459,27 +450,6 @@ body {
 
 }
 
-.exercise-img[data-img="1"] {
-    background-image: url('../img/exercise/img_1.webp'); /* URL изображения */
-
-}
-.exercise-img[data-img="2"] {
-    background-image: url('../img/exercise/img_2.webp'); /* URL изображения */
-
-}
-.exercise-img[data-img="3"] {
-    background-image: url('../img/exercise/img_3.webp'); /* URL изображения */
-
-}
-.exercise-img[data-img="4"] {
-    background-image: url('../img/exercise/img_4.webp'); /* URL изображения */
-
-}
-.exercise-img[data-img="5"] {
-    background-image: url('../img/exercise/img_5.webp'); /* URL изображения */
-
-}
-
 /*----------------------------------------------------------------*/
 /* Контент  `Описание занятий` страница (p-exercise.html)*/
 .blocks-page {
@@ -496,16 +466,18 @@ body {
     gap: 2vw;
 }
 .page-img {
-    width: 30vw;
-    height: 30vw;
+    width: 60%;
+    height: auto;
     border-radius: 10%;
     box-shadow: 0 -3px 10px 0 rgba(255, 255, 255, 0.05), 0 0 10px 0 rgba(255, 255, 255, 0.1), inset 0 2px 5px 0 rgba(0, 0, 0, 0.5), inset 0 -2px 5px 0 rgba(255, 255, 255, 0.1);
     background: rgba(0, 0, 0, 0.15);
-    background-image: url('../img/exercise/img_1.webp'); /* URL изображения */
-    background-size: cover; /* Изображение полностью покрывает элемент */
-    background-repeat: no-repeat; /* Изображение не повторяется */
-    background-position: center; /* Центрируем изображение */
-
+     overflow: hidden; /* Это необходимо, чтобы изображение не выходило за границы блока с радиусом */
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Изображение будет обрезано, чтобы заполнить контейнер, сохраняя пропорции */
+    border-radius: 10%; /* Применяем скругление к изображению */
 }
 .page-text {
     font-family: 'SofiaSans-SemiBold', sans-serif; /* Применение шрифта */
@@ -589,17 +561,32 @@ body {
     border-radius: 1vw;
     gap: 2vw;
     box-shadow: var(--box-shadow-inner-small);
-
+}
+.image-container {
+    position: relative;
+    width: 12vw; /* Соответствует ширине .article-img */
+    height: 12vw; /* Соответствует высоте .article-img */
 }
 .article-img {
-    width: 12vw;
-    height: 12vw;
+    width: 100%;
+    height: 100%;
     border-radius: 1vw;
     background: rgba(255, 255, 255, 0.65);
     background-size: cover; /* Изображение полностью покрывает элемент */
     background-repeat: no-repeat; /* Изображение не повторяется */
     background-position: center; /* Центрируем изображение */
-
+}
+.article-type-icon {
+    position: absolute;
+    bottom: -5%;
+    right: -5%;
+    width: calc(3em + 2.6vw);
+    height: calc(3em + 1.9vw);
+    fill: var(--color-text-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .article-title {
     font-family: 'SofiaSans-ExtraBold', sans-serif; /* Применение шрифта */
@@ -610,36 +597,11 @@ body {
 }
 .article-title p {
     max-width: 12vw;
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp:2;
-	overflow: hidden;
-	text-align: center;
-}
-
-.article-img[data-img="1"] {
-    background-image: url('../img/blog/1.webp'); /* URL изображения */
-
-}
-.article-img[data-img="2"] {
-    background-image: url('../img/blog/2.webp'); /* URL изображения */
-
-}
-.article-img[data-img="3"] {
-    background-image: url('../img/blog/3.webp'); /* URL изображения */
-
-}
-.article-img[data-img="4"] {
-    background-image: url('../img/blog/4.webp'); /* URL изображения */
-
-}
-.article-img[data-img="5"] {
-    background-image: url('../img/blog/5.webp'); /* URL изображения */
-
-}
-.article-img[data-img="6"] {
-    background-image: url('../img/blog/6.webp'); /* URL изображения */
-
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-align: center;
 }
 
 /* Стили для видео статьи */
@@ -653,7 +615,6 @@ body {
     overflow: hidden; /* Скрываем части, выходящие за границы контейнера */
     border-radius: var(--border-radius-small)
 }
-
 .video-container iframe {
     position: absolute;
     top: 0;
@@ -889,6 +850,7 @@ input:-webkit-autofill:active {
 }
 
 .modal-article .modal-body {
+    width: 100%;
     height: 100%;
     overflow-y: auto;
     scrollbar-width: none; /* скрываем полосу прокрутки Firefox */
