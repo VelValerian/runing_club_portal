@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>No Mondays - Занятия</title>
     <!--style-->
+<!--    <link rel="stylesheet" href="/frontend/css/reset.css"> &lt;!&ndash; ДЛЯ ЛОКАЛЬНОГО СЕРВЕРА&ndash;&gt;-->
+<!--    <link rel="stylesheet" href="/frontend/css/base.css"> &lt;!&ndash; ДЛЯ ЛОКАЛЬНОГО СЕРВЕРА&ndash;&gt;-->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/base.css">
 </head>
@@ -12,7 +14,8 @@
 
     <main class="container">
         <header class="header">
-            <a href="index.html">
+<!--            <a href="/frontend/index.html"> &lt;!&ndash; ДЛЯ ЛОКАЛЬНОГО СЕРВЕРА&ndash;&gt;-->
+            <a href="./index.html">
                 <div class="logo">
                     <div class="brand-icon"></div>
                     <div class="brand-name">NoMondays</div>
@@ -81,32 +84,39 @@
                 </p>
             </div>
             <div class="blocks-exercise">
+<!--                <a href=# class="article-link" data-article-url="/frontend/article/exercise/p-exercise.html"> &lt;!&ndash; ДЛЯ ЛОКАЛЬНОГО СЕРВЕРА&ndash;&gt;-->
                 <a href=# class="article-link" data-article-url="./article/exercise/p-exercise.html">
                     <div class="exercise-block">
+<!--                        <img class="exercise-img" src="/frontend/img/exercise/img_1.webp" alt="Тренер помогает ученице"> &lt;!&ndash; ДЛЯ ЛОКАЛЬНОГО СЕРВЕРА&ndash;&gt;-->
                         <img class="exercise-img" src="./img/exercise/img_1.webp" alt="Тренер помогает ученице">
                         <p class="exercise-title">Индивидуальные тренировки</p>
                     </div>
                </a>
                 <a href="#">
                    <div class="exercise-block">
+<!--                        <img class="exercise-img" src="/frontend/img/exercise/img_2.webp" alt="Набор полезной еды"> &lt;!&ndash; ДЛЯ ЛОКАЛЬНОГО СЕРВЕРА&ndash;&gt;-->
                         <img class="exercise-img" src="./img/exercise/img_2.webp" alt="Набор полезной еды">
                         <p class="exercise-title">Программа питания</p>
                     </div>
                </a>
+<!--                <a href=# class="article-link" data-article-url="/frontend/article/exercise/g-exercise.html">&lt;!&ndash; ДЛЯ ЛОКАЛЬНОГО СЕРВЕРА&ndash;&gt;-->
                 <a href=# class="article-link" data-article-url="./article/exercise/g-exercise.html">
                    <div class="exercise-block">
+<!--                        <img class="exercise-img" src="/frontend/img/exercise/img_3.webp" alt="Ноги бегущих людей на марафоне"> &lt;!&ndash; ДЛЯ ЛОКАЛЬНОГО СЕРВЕРА&ndash;&gt;-->
                         <img class="exercise-img" src="./img/exercise/img_3.webp" alt="Ноги бегущих людей на марафоне">
                         <p class="exercise-title">Групповые тренировки</p>
                     </div>
                </a>
                 <a href="#">
                     <div class="exercise-block">
+<!--                        <img class="exercise-img" src="/frontend/img/exercise/img_4.webp" alt="Мужчина дома бежит на беговой дорожке"> &lt;!&ndash; ДЛЯ ЛОКАЛЬНОГО СЕРВЕРА&ndash;&gt;-->
                         <img class="exercise-img" src="./img/exercise/img_4.webp" alt="Мужчина дома бежит на беговой дорожке">
                         <p class="exercise-title">Видео уроки</p>
                     </div>
                </a>
                 <a href="#">
                    <div class="exercise-block">
+<!--                    <img class="exercise-img" src="/frontend/img/exercise/img_5.webp" alt="Логотипы тренерующихся человечков"> &lt;!&ndash; ДЛЯ ЛОКАЛЬНОГО СЕРВЕРА&ndash;&gt;-->
                     <img class="exercise-img" src="./img/exercise/img_5.webp" alt="Логотипы тренерующихся человечков">
                     <p class="exercise-title">Программа тренировок</p>
                 </div>
@@ -115,7 +125,8 @@
             <div class="spread-line"></div>
         </div>
         <footer class="footer" id="footer">
-            <a href="index.html">
+<!--            <a href="/frontend/index.html"> &lt;!&ndash; ДЛЯ ЛОКАЛЬНОГО СЕРВЕРА&ndash;&gt;-->
+            <a href="./index.html">
                 <div class="logo">
                     <div class="brand-icon"></div>
                     <p class="brand-name">NoMondays</p>
@@ -126,9 +137,11 @@
                     <svg class="cont-icon" xmlns="http://www.w3.org/2000/svg"
                          id="location" data-name="MapPin" viewBox="0 0 24 24"
                          width="512" height="512">
-                        <path d="M12,.042a9.992,9.992,0,0,0-9.981,9.98c0,2.57,1.99,6.592,5.915,11.954a5.034,5.034,0,0,0,8.132,0c3.925-5.362,5.915-9.384,5.915-11.954A9.992,9.992,0,0,0,12,.042ZM12,14a4,4,0,1,1,4-4A4,4,0,0,1,12,14Z"/>
+                        <path d="M12,.042a9.992,9.992,0,0,0-9.981,9.98c0,2.57,1.99,6.592,5.915,11.954a5.034,
+                        5.034,0,0,0,8.132,0c3.925-5.362,5.915-9.384,5.915-11.954A9.992,9.992,0,0,0,12,.042ZM12,
+                        14a4,4,0,1,1,4-4A4,4,0,0,1,12,14Z"/>
                     </svg>
-                    <p>г. МОСКВА</p>
+                    <p>г. Москва</p>
                 </div>
                 <div class="cont-num">
                     <svg class="cont-icon" xmlns="http://www.w3.org/2000/svg"
@@ -158,6 +171,8 @@
         </div>
     </div>
 
+<!--    <script src="/frontend/jscript/modal-menu.js"></script>  &lt;!&ndash; ДЛЯ ЛОКАЛЬНОГО СЕРВЕРА&ndash;&gt;-->
+<!--    <script src="/frontend/jscript/modal-article.js"></script>  &lt;!&ndash; ДЛЯ ЛОКАЛЬНОГО СЕРВЕРА&ndash;&gt;-->
     <script src="./jscript/modal-menu.js"></script>
     <script src="./jscript/modal-article.js"></script>
 </body>
