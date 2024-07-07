@@ -132,6 +132,7 @@ body {
 
 .hamburger-head {
     display: flex; /* Используем flexbox для расположения элементов */
+    justify-content: space-between;
 
 }
 .hamburger-head.hidden {
